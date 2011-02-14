@@ -27,6 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <joy/Joy.h>
@@ -34,10 +35,10 @@
 #include "boost/thread/thread.hpp"
 #include "ros/console.h"
 
-class NxtTeleop
+class R1_teleop_joy
 {
 public:
-  NxtTeleop();
+  R1_teleop_joy();
 
 private:
   void joyCallback(const joy::Joy::ConstPtr& joy);
@@ -57,7 +58,7 @@ private:
   
 };
 
-NxtTeleop::NxtTeleop():
+R1_teleop_joy::R1_teleop_joy():
   ph_("~"),
   linear_(1),
   angular_(2),
@@ -74,12 +75,12 @@ NxtTeleop::NxtTeleop():
   ph_.param("scale_linear", l_scale_, l_scale_);
 
   vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 1);
-  joy_sub_ = nh_.subscribe<joy::Joy>("joy", 10, &NxtTeleop::joyCallback, this);
+  joy_sub_ = nh_.subscribe<joy::Joy>("joy", 10, &R1_teleop_joy::joyCallback, this);
 
-  timer_ = nh_.createTimer(ros::Duration(0.1), boost::bind(&NxtTeleop::publish, this));
+  timer_ = nh_.createTimer(ros::Duration(0.1), boost::bind(&R1_teleop_joy::publish, this));
 }
 
-void NxtTeleop::joyCallback(const joy::Joy::ConstPtr& joy)
+void R1_teleop_joy::joyCallback(const joy::Joy::ConstPtr& joy)
 {
   geometry_msgs::Twist vel;
  
@@ -97,7 +98,7 @@ void NxtTeleop::joyCallback(const joy::Joy::ConstPtr& joy)
 
 }
 
-void NxtTeleop::publish()
+void R1_teleop_joy::publish()
 {
   boost::mutex::scoped_lock lock(publish_mutex_);  
   if (deadman_pressed_)
@@ -117,10 +118,12 @@ void NxtTeleop::publish()
 
   
 }
+
+//test
 int main(int argc, char** argv)
 {
   ros::init(argc, argv, "R1_teleop_joy");
-  NxtTeleop nxt_teleop;
+  R1_teleop_joy teleop;
 
   ros::spin();
 }

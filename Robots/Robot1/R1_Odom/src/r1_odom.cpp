@@ -2,10 +2,13 @@
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
 #include <joy/Joy.h>
+#include <geometry_msgs/Twist.h>
 
 
 
 joy::Joy auxJoy1;
+
+geometry_msgs::Twist twist;
 
 void cmdCallback(const joy::Joy::ConstPtr& joy)
 {
@@ -28,6 +31,18 @@ void cmdCallback(const joy::Joy::ConstPtr& joy)
 
 }
 
+void cmdTwistCallback(const geometry_msgs::Twist &twist_aux)
+{
+
+  twist.linear.x = twist_aux.linear.x;
+  twist.linear.y = twist_aux.linear.y;
+  twist.linear.z = twist_aux.linear.z;
+  twist.angular.x = twist_aux.angular.x;
+  twist.angular.y = twist_aux.angular.y;
+  twist.angular.z = twist_aux.angular.z;
+
+}
+
 int main(int argc, char** argv){
   ros::init(argc, argv, "odometry_publisher");
 
@@ -35,8 +50,16 @@ int main(int argc, char** argv){
   ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);
   tf::TransformBroadcaster odom_broadcaster;
 
-  ros::Subscriber joy_sub = n.subscribe("joy", 10, cmdCallback);
+  //ros::Subscriber joy_sub = n.subscribe("joy", 10, cmdCallback);
 
+  ros::Subscriber joy_sub = n.subscribe("cmd_vel", 10, cmdTwistCallback);
+
+  twist.linear.x = 0.0;
+  twist.linear.y = 0.0;
+  twist.linear.z = 0.0;
+  twist.angular.x = 0.0;
+  twist.angular.y = 0.0;
+  twist.angular.z = 0.0;
 
   auxJoy1.buttons.resize(4);
   auxJoy1.axes.resize(4);
@@ -58,9 +81,11 @@ int main(int argc, char** argv){
     ros::spinOnce();
     current_time = ros::Time::now();
 
-    vx = auxJoy1.axes[1];
-    vy = 0;
-    vth = auxJoy1.axes[0];
+    vx = twist.linear.x;
+    vy = twist.linear.y;
+    vth = twist.angular.z;
+
+    	
 
     //compute odometry in a typical way given the velocities of the robot
     double dt = (current_time - last_time).toSec();

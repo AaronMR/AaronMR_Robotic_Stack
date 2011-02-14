@@ -3,7 +3,21 @@
 
 //############################################### struct_Twist ##############################
 
+struct_Twist::struct_Twist()
+{
 
+
+    haveSubscriber = false;
+    havePublisher = false;
+
+    ros::spinOnce();
+    cout << "raro raro" << endl;
+    sizeof_Joy = sizeof(Joy);
+
+    mutex = PTHREAD_MUTEX_INITIALIZER;
+    canRecv_t = true;
+    canSend_t = true;
+}
 
 
 int struct_Twist::spinOnce()
@@ -66,19 +80,7 @@ void* struct_Twist::set_Publisher(char* name)
     return NULL;
 }
 
-struct_Twist::struct_Twist()
-{
 
-
-    haveSubscriber = false;
-    havePublisher = false;
-
-    ros::spinOnce();
-    cout << "raro raro" << endl;
-    sizeof_Joy = sizeof(Joy);
-
-
-}
 
 int struct_Twist::serialize(char* buf3)
 {
