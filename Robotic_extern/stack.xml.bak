@@ -1,0 +1,9 @@
+<stack>
+  <description brief="Robotic_extern">Robotic_extern</description>
+  <author>Maintained by aaronmr</author>
+  <license>LGPL,proprietary</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Robotic_extern</url>
+  <depend stack="ros" />
+
+</stack>

@@ -1,0 +1,226 @@
+\hypertarget{classConfigFile}{
+\section{ConfigFile Class Reference}
+\label{classConfigFile}\index{ConfigFile@{ConfigFile}}
+}
+
+
+{\ttfamily \#include $<$ConfigFile.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structConfigFile_1_1file__not__found}{file\_\-not\_\-found}
+\item 
+struct \hyperlink{structConfigFile_1_1key__not__found}{key\_\-not\_\-found}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classConfigFile_a2690c3c6b72869b65d168791b28264dc}{ConfigFile} (string filename, string delimiter=\char`\"{}=\char`\"{}, string comment=\char`\"{}\#\char`\"{}, string sentry=\char`\"{}EndConfigFile\char`\"{})
+\item 
+\hyperlink{classConfigFile_a9ce259defdfaabeedb2455849ca6bd1e}{ConfigFile} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classConfigFile_a2c870b7009aa29208838fc73f8dde6af}{read} (const string \&key) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classConfigFile_a58fe3e41915e8f119a91d51d5d369014}{read} (const string \&key, const T \&value) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{classConfigFile_a7526e5aad42677251502b67c579d1539}{readInto} (T \&var, const string \&key) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{classConfigFile_a22b3d7f8312ca371631d75d803263f10}{readInto} (T \&var, const string \&key, const T \&value) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classConfigFile_a19311cc5817f42b2f985f2c2b72b3424}{add} (string key, const T \&value)
+\item 
+void \hyperlink{classConfigFile_afca295f72101b138ad2702a11c342f37}{remove} (const string \&key)
+\item 
+bool \hyperlink{classConfigFile_afd3d1146ae212a7e5802961f5ad3fe91}{keyExists} (const string \&key) const 
+\item 
+string \hyperlink{classConfigFile_adcc1df41c7d669a7cc81c47b85b0ee14}{getDelimiter} () const 
+\item 
+string \hyperlink{classConfigFile_a2b0cd50789ea83b1a12bf39293c7401a}{getComment} () const 
+\item 
+string \hyperlink{classConfigFile_adf270b0cf2a1b034fc18fd2e82296760}{getSentry} () const 
+\item 
+string \hyperlink{classConfigFile_af28390aba7d8f399ac734c074e659b99}{setDelimiter} (const string \&s)
+\item 
+string \hyperlink{classConfigFile_a2e06b3000fb45426c975b334b2cee148}{setComment} (const string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::map$<$ string, string $>$::iterator \hyperlink{classConfigFile_a91de4778982f558673be7465f33750f5}{mapi}
+\item 
+typedef std::map$<$ string, string $>$::const\_\-iterator \hyperlink{classConfigFile_af606aa032e366450b81792da67c984fc}{mapci}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static string \hyperlink{classConfigFile_a0b2ef4a39ca6ea31d186c301f1f52700}{T\_\-as\_\-string} (const T \&t)
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \hyperlink{classConfigFile_a741caa76c057b33332439cce2521b27e}{string\_\-as\_\-T} (const string \&s)
+\item 
+static void \hyperlink{classConfigFile_a6b445b393fcf42386a804fc4077fac10}{trim} (string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classConfigFile_ad63f3e259f665192b64fb3e83c701425}{myDelimiter}
+\item 
+string \hyperlink{classConfigFile_a2c60a141e8ad012b86a0642ec8ec638d}{myComment}
+\item 
+string \hyperlink{classConfigFile_af066ec1942c50848a055350029ebbca5}{mySentry}
+\item 
+std::map$<$ string, string $>$ \hyperlink{classConfigFile_a91b9b9e241d42bd3b1bb8b3e6355761f}{myContents}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::ostream \& \hyperlink{classConfigFile_a8ccacbc37db1992a5515e2c72fc83ce6}{operator$<$$<$} (std::ostream \&os, const \hyperlink{classConfigFile}{ConfigFile} \&cf)
+\item 
+std::istream \& \hyperlink{classConfigFile_a25042475439039e70f90febe7d0e63ec}{operator$>$$>$} (std::istream \&is, \hyperlink{classConfigFile}{ConfigFile} \&cf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classConfigFile_af606aa032e366450b81792da67c984fc}{
+\index{ConfigFile@{ConfigFile}!mapci@{mapci}}
+\index{mapci@{mapci}!ConfigFile@{ConfigFile}}
+\subsubsection[{mapci}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$string,string$>$::const\_\-iterator {\bf ConfigFile::mapci}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_af606aa032e366450b81792da67c984fc}
+\hypertarget{classConfigFile_a91de4778982f558673be7465f33750f5}{
+\index{ConfigFile@{ConfigFile}!mapi@{mapi}}
+\index{mapi@{mapi}!ConfigFile@{ConfigFile}}
+\subsubsection[{mapi}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$string,string$>$::iterator {\bf ConfigFile::mapi}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_a91de4778982f558673be7465f33750f5}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classConfigFile_a2690c3c6b72869b65d168791b28264dc}{
+\index{ConfigFile@{ConfigFile}!ConfigFile@{ConfigFile}}
+\index{ConfigFile@{ConfigFile}!ConfigFile@{ConfigFile}}
+\subsubsection[{ConfigFile}]{\setlength{\rightskip}{0pt plus 5cm}ConfigFile::ConfigFile (string {\em filename}, \/  string {\em delimiter} = {\ttfamily \char`\"{}=\char`\"{}}, \/  string {\em comment} = {\ttfamily \char`\"{}\#\char`\"{}}, \/  string {\em sentry} = {\ttfamily \char`\"{}EndConfigFile\char`\"{}})}}
+\label{classConfigFile_a2690c3c6b72869b65d168791b28264dc}
+\hypertarget{classConfigFile_a9ce259defdfaabeedb2455849ca6bd1e}{
+\index{ConfigFile@{ConfigFile}!ConfigFile@{ConfigFile}}
+\index{ConfigFile@{ConfigFile}!ConfigFile@{ConfigFile}}
+\subsubsection[{ConfigFile}]{\setlength{\rightskip}{0pt plus 5cm}ConfigFile::ConfigFile ()}}
+\label{classConfigFile_a9ce259defdfaabeedb2455849ca6bd1e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classConfigFile_a19311cc5817f42b2f985f2c2b72b3424}{
+\index{ConfigFile@{ConfigFile}!add@{add}}
+\index{add@{add}!ConfigFile@{ConfigFile}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void ConfigFile::add (string {\em key}, \/  const T \& {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a19311cc5817f42b2f985f2c2b72b3424}
+\hypertarget{classConfigFile_a2b0cd50789ea83b1a12bf39293c7401a}{
+\index{ConfigFile@{ConfigFile}!getComment@{getComment}}
+\index{getComment@{getComment}!ConfigFile@{ConfigFile}}
+\subsubsection[{getComment}]{\setlength{\rightskip}{0pt plus 5cm}string ConfigFile::getComment () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a2b0cd50789ea83b1a12bf39293c7401a}
+\hypertarget{classConfigFile_adcc1df41c7d669a7cc81c47b85b0ee14}{
+\index{ConfigFile@{ConfigFile}!getDelimiter@{getDelimiter}}
+\index{getDelimiter@{getDelimiter}!ConfigFile@{ConfigFile}}
+\subsubsection[{getDelimiter}]{\setlength{\rightskip}{0pt plus 5cm}string ConfigFile::getDelimiter () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_adcc1df41c7d669a7cc81c47b85b0ee14}
+\hypertarget{classConfigFile_adf270b0cf2a1b034fc18fd2e82296760}{
+\index{ConfigFile@{ConfigFile}!getSentry@{getSentry}}
+\index{getSentry@{getSentry}!ConfigFile@{ConfigFile}}
+\subsubsection[{getSentry}]{\setlength{\rightskip}{0pt plus 5cm}string ConfigFile::getSentry () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_adf270b0cf2a1b034fc18fd2e82296760}
+\hypertarget{classConfigFile_afd3d1146ae212a7e5802961f5ad3fe91}{
+\index{ConfigFile@{ConfigFile}!keyExists@{keyExists}}
+\index{keyExists@{keyExists}!ConfigFile@{ConfigFile}}
+\subsubsection[{keyExists}]{\setlength{\rightskip}{0pt plus 5cm}bool ConfigFile::keyExists (const string \& {\em key}) const}}
+\label{classConfigFile_afd3d1146ae212a7e5802961f5ad3fe91}
+\hypertarget{classConfigFile_a58fe3e41915e8f119a91d51d5d369014}{
+\index{ConfigFile@{ConfigFile}!read@{read}}
+\index{read@{read}!ConfigFile@{ConfigFile}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T ConfigFile::read (const string \& {\em key}, \/  const T \& {\em value}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a58fe3e41915e8f119a91d51d5d369014}
+\hypertarget{classConfigFile_a2c870b7009aa29208838fc73f8dde6af}{
+\index{ConfigFile@{ConfigFile}!read@{read}}
+\index{read@{read}!ConfigFile@{ConfigFile}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T ConfigFile::read (const string \& {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a2c870b7009aa29208838fc73f8dde6af}
+\hypertarget{classConfigFile_a22b3d7f8312ca371631d75d803263f10}{
+\index{ConfigFile@{ConfigFile}!readInto@{readInto}}
+\index{readInto@{readInto}!ConfigFile@{ConfigFile}}
+\subsubsection[{readInto}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool ConfigFile::readInto (T \& {\em var}, \/  const string \& {\em key}, \/  const T \& {\em value}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a22b3d7f8312ca371631d75d803263f10}
+\hypertarget{classConfigFile_a7526e5aad42677251502b67c579d1539}{
+\index{ConfigFile@{ConfigFile}!readInto@{readInto}}
+\index{readInto@{readInto}!ConfigFile@{ConfigFile}}
+\subsubsection[{readInto}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool ConfigFile::readInto (T \& {\em var}, \/  const string \& {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a7526e5aad42677251502b67c579d1539}
+\hypertarget{classConfigFile_afca295f72101b138ad2702a11c342f37}{
+\index{ConfigFile@{ConfigFile}!remove@{remove}}
+\index{remove@{remove}!ConfigFile@{ConfigFile}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void ConfigFile::remove (const string \& {\em key})}}
+\label{classConfigFile_afca295f72101b138ad2702a11c342f37}
+\hypertarget{classConfigFile_a2e06b3000fb45426c975b334b2cee148}{
+\index{ConfigFile@{ConfigFile}!setComment@{setComment}}
+\index{setComment@{setComment}!ConfigFile@{ConfigFile}}
+\subsubsection[{setComment}]{\setlength{\rightskip}{0pt plus 5cm}string ConfigFile::setComment (const string \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_a2e06b3000fb45426c975b334b2cee148}
+\hypertarget{classConfigFile_af28390aba7d8f399ac734c074e659b99}{
+\index{ConfigFile@{ConfigFile}!setDelimiter@{setDelimiter}}
+\index{setDelimiter@{setDelimiter}!ConfigFile@{ConfigFile}}
+\subsubsection[{setDelimiter}]{\setlength{\rightskip}{0pt plus 5cm}string ConfigFile::setDelimiter (const string \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classConfigFile_af28390aba7d8f399ac734c074e659b99}
+\hypertarget{classConfigFile_a741caa76c057b33332439cce2521b27e}{
+\index{ConfigFile@{ConfigFile}!string\_\-as\_\-T@{string\_\-as\_\-T}}
+\index{string\_\-as\_\-T@{string\_\-as\_\-T}!ConfigFile@{ConfigFile}}
+\subsubsection[{string\_\-as\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}bool ConfigFile::string\_\-as\_\-T$<$ bool $>$ (const string \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{classConfigFile_a741caa76c057b33332439cce2521b27e}
+\hypertarget{classConfigFile_a0b2ef4a39ca6ea31d186c301f1f52700}{
+\index{ConfigFile@{ConfigFile}!T\_\-as\_\-string@{T\_\-as\_\-string}}
+\index{T\_\-as\_\-string@{T\_\-as\_\-string}!ConfigFile@{ConfigFile}}
+\subsubsection[{T\_\-as\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ string ConfigFile::T\_\-as\_\-string (const T \& {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{classConfigFile_a0b2ef4a39ca6ea31d186c301f1f52700}
+\hypertarget{classConfigFile_a6b445b393fcf42386a804fc4077fac10}{
+\index{ConfigFile@{ConfigFile}!trim@{trim}}
+\index{trim@{trim}!ConfigFile@{ConfigFile}}
+\subsubsection[{trim}]{\setlength{\rightskip}{0pt plus 5cm}void ConfigFile::trim (string \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classConfigFile_a6b445b393fcf42386a804fc4077fac10}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classConfigFile_a8ccacbc37db1992a5515e2c72fc83ce6}{
+\index{ConfigFile@{ConfigFile}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ConfigFile@{ConfigFile}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (std::ostream \& {\em os}, \/  const {\bf ConfigFile} \& {\em cf})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classConfigFile_a8ccacbc37db1992a5515e2c72fc83ce6}
+\hypertarget{classConfigFile_a25042475439039e70f90febe7d0e63ec}{
+\index{ConfigFile@{ConfigFile}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ConfigFile@{ConfigFile}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std::istream\& operator$>$$>$ (std::istream \& {\em is}, \/  {\bf ConfigFile} \& {\em cf})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classConfigFile_a25042475439039e70f90febe7d0e63ec}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classConfigFile_a2c60a141e8ad012b86a0642ec8ec638d}{
+\index{ConfigFile@{ConfigFile}!myComment@{myComment}}
+\index{myComment@{myComment}!ConfigFile@{ConfigFile}}
+\subsubsection[{myComment}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf ConfigFile::myComment}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_a2c60a141e8ad012b86a0642ec8ec638d}
+\hypertarget{classConfigFile_a91b9b9e241d42bd3b1bb8b3e6355761f}{
+\index{ConfigFile@{ConfigFile}!myContents@{myContents}}
+\index{myContents@{myContents}!ConfigFile@{ConfigFile}}
+\subsubsection[{myContents}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$string,string$>$ {\bf ConfigFile::myContents}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_a91b9b9e241d42bd3b1bb8b3e6355761f}
+\hypertarget{classConfigFile_ad63f3e259f665192b64fb3e83c701425}{
+\index{ConfigFile@{ConfigFile}!myDelimiter@{myDelimiter}}
+\index{myDelimiter@{myDelimiter}!ConfigFile@{ConfigFile}}
+\subsubsection[{myDelimiter}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf ConfigFile::myDelimiter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_ad63f3e259f665192b64fb3e83c701425}
+\hypertarget{classConfigFile_af066ec1942c50848a055350029ebbca5}{
+\index{ConfigFile@{ConfigFile}!mySentry@{mySentry}}
+\index{mySentry@{mySentry}!ConfigFile@{ConfigFile}}
+\subsubsection[{mySentry}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf ConfigFile::mySentry}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classConfigFile_af066ec1942c50848a055350029ebbca5}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/TCP\_\-RTAI/ConfigFile/\hyperlink{ConfigFile_8h}{ConfigFile.h}\item 
+include/TCP\_\-RTAI/ConfigFile/\hyperlink{ConfigFile_8cpp}{ConfigFile.cpp}\end{DoxyCompactItemize}

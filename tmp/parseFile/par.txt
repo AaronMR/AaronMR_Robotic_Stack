@@ -1,0 +1,10 @@
+Alarm = 13:00
+
+Type = 22
+
+process_1(
+	name "process_1"
+	shm "shm_1"
+	Node2RTAI "struct_1"
+	RTAI2Node "struct_2"
+)

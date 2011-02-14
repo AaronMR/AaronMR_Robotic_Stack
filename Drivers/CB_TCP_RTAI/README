@@ -1,0 +1,29 @@
+Here's how to create a ROS package using CodeBlocks:
+
+    *Create a new project as you normally do in CodeBlocks, either as a console project or as a wxWidgets project. Write a manifest.xml file that specifies the ROS dependencies, as you normally do for a ROS package. To get the compiler and the linker flags, use these commands from a terminal window:
+
+        rospack export --lang=cpp --attrib=cflags PackageName 
+        rospack export --lang=cpp --attrib=lflags PackageName
+
+      You can just copy and paste the results into the Build Options of your project, specifically:
+          o In CodeBlocks, right click on the project name, select Build Options, select the project (rather than the Debug or Release versions that are selected by default in the popup window), select the tabs for Compiler Settings, Other Options, and paste the cflags you got from above. Then select the linker settings tab, and in Other Linker Options, paste the linker flags you got from above. You can also do this with a bash script: copy the flags into bash scripts, make them executable, and put the scripts in place of the long lists of flags. You can use environment varialbles in the script. Note that CodeBlocks allows a "local" definition of environment variables as well. 
+      If you are writing a ROS node, create the msg (and perhaps svr) directory and populate it as you normally do using.
+          o `rospack find roscpp`/scripts/genmsg_cpp msg/MessageName.msg 
+      Then be sure to go back and add -Imgs/cpp (and perhaps -I srv/cpp) flags to the cflags in Compiler Settings, Other Options.
+
+      I posted in the Attachments an example of code that works in a CodeBlocks wxWidgets GUI project and runs a ROS node that subscribes, advertises, services, and publishes data across various busses. The files are nodeTemplate.cpp and nodeTemplate.h 
+
+Here's how to use the sample code: . Create a package called wxWidgetsNodeTemplate, using the attached manifest.xml file. Also create a msg directory and a srv directory.
+
+    * Use the attached RosNodeTemplate.msg file and auto-generate the header for it with
+    * `rospack find roscpp`/scripts/genmsg_cpp msg/RosNodeTemplate.msg
+    * Similarly use the attached NodeTemplateServer,srv file and auto-generate the header for it with
+    * `rospack find roscpp`/scripts/gensrv_cpp srv/NodeTemplateServer.srv
+    * Now create a CodeBlocks project as detailed above. Add the attached files, nodeTempalte.h and nodeTemplate.cpp to the project.
+    * Now make an instance of nodeTemplate, passing it a pointer to a wxTextCtrl:
+    * m_pNodeTemplate = new nodeTemplate(txtGeneral);
+    * It will listen to monitor_node_bus and write to the textbox when it sees activity on that bus.
+    * It will service calls to node_service_bus and write to the textbox when the service is called.
+    * You can publish on node_bus_out with
+    *m_pNodeTemplate->Publish();
+    

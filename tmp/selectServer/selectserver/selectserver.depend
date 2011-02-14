@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1296557695 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/selectServer/selectserver/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+

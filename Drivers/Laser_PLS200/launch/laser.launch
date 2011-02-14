@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- for visualization -->
+  <node pkg="rviz" type="rviz" name="rviz" />
+
+  <node pkg="PLS200" type="pls_node" name="pls_node" />
+
+
+</launch>
+

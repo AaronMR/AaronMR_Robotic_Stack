@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1296486867 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/chatSample/server/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<errno.h>
+	<unistd.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+

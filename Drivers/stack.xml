@@ -1,0 +1,12 @@
+<stack>
+  <description brief="Drivers">Drivers</description>
+  <author>Maintained by aaronmr</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Drivers</url>
+  <depend stack="common_msgs" /> <!-- nav_msgs, sensor_msgs, geometry_msgs -->
+  <depend stack="geometry" /> <!-- tf, angles -->
+  <depend stack="laser_pipeline" /> <!-- laser_geometry -->
+  <depend stack="ros" /> <!-- roscpp -->
+
+</stack>

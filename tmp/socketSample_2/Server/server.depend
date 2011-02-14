@@ -1,0 +1,116 @@
+# depslib dependency file v1.0
+1292516410 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/main.cpp
+	<fcntl.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdio.h>
+	<netinet/in.h>
+	<resolv.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<pthread.h>
+	"parser.h"
+	"transmition.h"
+
+1292493161 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1292246027 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/parser.cpp
+	"parser.h"
+
+1292493076 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1292343009 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/parameters.h
+
+1292516434 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/transmition.h
+	"parameters.h"
+
+1292516683 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/server/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+
+1294906904 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/main.cpp
+	<fcntl.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdio.h>
+	<netinet/in.h>
+	<resolv.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<pthread.h>
+	"parser.h"
+	"transmition.h"
+
+1292493076 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1292516434 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/transmition.h
+	"parameters.h"
+
+1292343009 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/parameters.h
+
+1292493161 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1292516683 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/Server/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+
+1292493076 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1292516434 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/transmition.h
+	"parameters.h"
+
+1292577426 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/parameters.h
+
+1292493161 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1294908427 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+	"SocketException.h"
+
+1292580926 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/socketSample_2/includes/SocketException.h
+	<string>
+

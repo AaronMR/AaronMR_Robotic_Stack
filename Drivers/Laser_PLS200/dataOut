@@ -1,0 +1,281 @@
+
+transmitest Version "Release_20091108_n"  (www.peak-system.com)
+------- Copyright (C) 2004-2009 PEAK System-Technik GmbH ------
+transmitest comes with ABSOLUTELY NO WARRANTY.     This is free
+software  and you are welcome  to redistribute it under certain
+conditions.   For   details   see    attached   COPYING   file.
+
+el parametro t tiene algo
+el parametro b tiene algo
+transmitest: type=usb, Serial Number=default, Device Number=0
+             Only standard frames are sent, init with BTR0BTR1=0x0014
+             Data will be read from = "/home/aaronmr/ROS/PLS200/test".
+debug 1 
+transmitest: driver version = Release_20100616_n
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+El valor enviado es = -1.338493
+El valor enviado es = -1.338493
+Position = [ bdc62cb3 ]
+Position = [ 189 198 44 179 ]
+el numero es = -0.096765 
+------------------------
+El valor enviado es = -0.096765
+Position = [ be6bffcc ]
+Position = [ 190 107 255 204 ]
+el numero es = -0.230468 
+------------------------
+El valor enviado es = -0.230468
+Position = [ be5ddf57 ]
+Position = [ 190 93 223 87 ]
+el numero es = -0.216672 
+------------------------
+El valor enviado es = -0.216672
+Position = [ be43bca5 ]
+Position = [ 190 67 188 165 ]
+el numero es = -0.191149 
+------------------------
+El valor enviado es = -0.191149
+Position = [ be295c90 ]
+Position = [ 190 41 92 144 ]
+el numero es = -0.165392 
+------------------------
+El valor enviado es = -0.165392
+Position = [ be0ece70 ]
+Position = [ 190 14 206 112 ]
+el numero es = -0.139459 
+------------------------
+El valor enviado es = -0.139459
+Position = [ bde83906 ]
+Position = [ 189 232 57 6 ]
+el numero es = -0.113390 
+------------------------
+El valor enviado es = -0.113390
+Position = [ bdb2c0b5 ]
+Position = [ 189 178 192 181 ]
+el numero es = -0.087282 
+------------------------
+El valor enviado es = -0.087282
+Position = [ bd7a7c55 ]
+Position = [ 189 122 124 85 ]
+el numero es = -0.061154 
+------------------------
+El valor enviado es = -0.061154
+Position = [ bd0f4e52 ]
+Position = [ 189 15 78 82 ]
+el numero es = -0.034987 
+------------------------
+El valor enviado es = -0.034987
+Position = [ bc10813b ]
+Position = [ 188 16 129 59 ]
+el numero es = -0.008820 
+------------------------
+El valor enviado es = -0.008820
+El valor enviado es = -1.338493
+Position = [ bcce8ef2 ]
+Position = [ 188 206 142 242 ]
+el numero es = -0.025215 
+------------------------
+El valor enviado es = -0.025215
+Position = [ bc957de3 ]
+Position = [ 188 149 125 227 ]
+el numero es = -0.018249 
+------------------------
+El valor enviado es = -0.018249
+Position = [ bb30ba3f ]
+Position = [ 187 48 186 63 ]
+el numero es = -0.002697 
+------------------------
+El valor enviado es = -0.002697
+Position = [ ba060191 ]
+Position = [ 186 6 1 145 ]
+el numero es = -0.000511 
+------------------------
+El valor enviado es = -0.000511
+El valor enviado es = -1.338493
+Position = [ b927ba95 ]
+Position = [ 185 39 186 149 ]
+el numero es = -0.000160 
+------------------------
+El valor enviado es = -0.000160
+Position = [ b833d9ee ]
+Position = [ 184 51 217 238 ]
+el numero es = -0.000043 
+------------------------
+El valor enviado es = -0.000043
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+Position = [ b6815507 ]
+Position = [ 182 129 85 7 ]
+el numero es = -0.000004 
+------------------------
+El valor enviado es = -0.000004
+transmitest: type            = usb
+             Serial Number   = 0xffffffff
+             Device Number   = 255
+             count of reads  = 54
+             count of writes = 1
+             count of errors = 12
+             count of irqs   = 34286
+             last CAN status = 0x0020
+             last error      = 0
+             open paths      = 1
+             driver version  = Release_20100616_n
+transmitest: finished (0).
+

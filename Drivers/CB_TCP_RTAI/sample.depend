@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1291986919 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/codeblocks/src/TCP_RTAI_node.cpp
+	<ros/ros.h>
+	<tf/transform_broadcaster.h>
+	<nav_msgs/Odometry.h>
+	"parameters.h"
+	<stdio.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+
+1291976150 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/codeblocks//parameters.h
+
+1295009954 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/src/TCP_RTAI_node.cpp
+	<ros/ros.h>
+	<tf/transform_broadcaster.h>
+	<nav_msgs/Odometry.h>
+	<turtlesim/Velocity.h>
+	<joy/Joy.h>
+	<fcntl.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdio.h>
+	<netinet/in.h>
+	<resolv.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<iostream>
+	"parser.h"
+	"transmition.h"
+
+1294998216 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1294998009 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1294994196 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+	"SocketException.h"
+
+1294993975 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/transmition.h
+	"parameters.h"
+
+1294993295 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/parameters.h
+
+1292580926 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/SocketException.h
+	<string>
+
+1294998216 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1295008435 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1295009847 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+	"SocketException.h"
+
+1295009598 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.h
+	"parameters.h"
+
+1295011092 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parameters.h
+	<sstream>
+
+1292580926 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/SocketException.h
+	<string>
+
+1295000920 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/src/parser.cpp
+	<stdio.h>
+	<string.h>
+	<parser.h>
+

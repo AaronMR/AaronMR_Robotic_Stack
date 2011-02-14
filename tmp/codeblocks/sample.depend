@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1292244906 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/codeblocks/src/TCP_RTAI_node.cpp
+	<ros/ros.h>
+	<tf/transform_broadcaster.h>
+	<nav_msgs/Odometry.h>
+	"parameters.h"
+	<stdio.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+
+1291976150 /home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/codeblocks//parameters.h
+

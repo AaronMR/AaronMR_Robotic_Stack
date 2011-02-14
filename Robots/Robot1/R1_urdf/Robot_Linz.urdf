@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<robot name="flexible">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_body.dae"/>
+      </geometry>
+      <origin xyz="0 0 0.226"/>
+    </visual>
+  </link>
+  
+  <link name="head">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="head_swivel" type="continuous">
+    <parent link="base_link"/>
+    <child link="head"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+
+  <link name="kinect_rgb">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_kinect.dae"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="tobox2" type="continuous">
+    <parent link="head"/>
+    <child link="kinect_rgb"/>
+    <origin rpy="-1.57 0 -1.570" xyz="0.320 0 0.555"/>
+    
+  </joint>
+
+
+  <link name="medida">
+    <visual>
+      
+      <geometry>
+        <box size=".10 .08 .08"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="tobox3" type="continuous">
+    <parent link="head"/>
+    <child link="medida"/>
+    <origin rpy="1 1 1" xyz="0 3.15 0"/>
+    
+  </joint>
+
+
+
+  <link name="wheel_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="tobox5" type="continuous">
+    <parent link="head"/>
+    <child link="wheel_1"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 0" xyz="0.235 -0.17 0"/>
+  </joint>
+
+  <link name="wheel_2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="tobox6" type="continuous">
+    <parent link="head"/>
+    <child link="wheel_2"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 3.14" xyz="0.235 0.17 0"/>
+  </joint>
+
+  <link name="wheel_3">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="tobox7" type="continuous">
+    <parent link="head"/>
+    <child link="wheel_3"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 0 " xyz="-0.235 -0.17 0"/>
+  </joint>
+
+  <link name="wheel_4">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="tobox8" type="continuous">
+    <parent link="head"/>
+    <child link="wheel_4"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 3.14" xyz="-0.235 0.17 0"/>
+  </joint>
+
+  <link name="PLS200">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh  scale="0.025 0.025 0.025" filename="package://urdf_tutorial/bot_PLS200.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="tobox9" type="continuous">
+    <parent link="head"/>
+    <child link="PLS200"/>
+    <origin rpy="0 0 0" xyz="0.420 0 0.26"/>
+  </joint>
+
+
+
+
+
+</robot>
+
+

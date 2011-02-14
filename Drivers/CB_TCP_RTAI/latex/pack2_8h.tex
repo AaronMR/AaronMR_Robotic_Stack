@@ -1,0 +1,83 @@
+\hypertarget{pack2_8h}{
+\section{include/TCP\_\-RTAI/pack2.h File Reference}
+\label{pack2_8h}\index{include/TCP\_\-RTAI/pack2.h@{include/TCP\_\-RTAI/pack2.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$ctype.h$>$}\par
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pack2_8h_a8054d66b1fec53fd0e206da092955ee2}{pack754\_\-16}(f)~(pack754((f), 16, 5))
+\item 
+\#define \hyperlink{pack2_8h_a7ec091322001cc549142e222b29b87a4}{pack754\_\-32}(f)~(pack754((f), 32, 8))
+\item 
+\#define \hyperlink{pack2_8h_aecfbf8630d11c12a8c032a9db89d22c3}{pack754\_\-64}(f)~(pack754((f), 64, 11))
+\item 
+\#define \hyperlink{pack2_8h_a65df7c687c98d17984940cb74f26d0f9}{unpack754\_\-16}(i)~(unpack754((i), 16, 5))
+\item 
+\#define \hyperlink{pack2_8h_ab3683c7777557e82c634055870ab74cf}{unpack754\_\-32}(i)~(unpack754((i), 32, 8))
+\item 
+\#define \hyperlink{pack2_8h_a74cf3c6c3f16ce8b7392aa06faa0eb30}{unpack754\_\-64}(i)~(unpack754((i), 64, 11))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{pack2_8h_a072cafc5116741a3b3ad633a298b052b}{pack} (unsigned char $\ast$buf, char $\ast$format,...)
+\item 
+void \hyperlink{pack2_8h_a994460131bfe428bb6154ca212a572e7}{unpack} (unsigned char $\ast$buf, char $\ast$format,...)
+\item 
+int \hyperlink{pack2_8h_a0e663f52efbc8593793d628b4259ce9b}{main2} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{pack2_8h_a8054d66b1fec53fd0e206da092955ee2}{
+\index{pack2.h@{pack2.h}!pack754\_\-16@{pack754\_\-16}}
+\index{pack754\_\-16@{pack754\_\-16}!pack2.h@{pack2.h}}
+\subsubsection[{pack754\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define pack754\_\-16(f)~(pack754((f), 16, 5))}}
+\label{pack2_8h_a8054d66b1fec53fd0e206da092955ee2}
+\hypertarget{pack2_8h_a7ec091322001cc549142e222b29b87a4}{
+\index{pack2.h@{pack2.h}!pack754\_\-32@{pack754\_\-32}}
+\index{pack754\_\-32@{pack754\_\-32}!pack2.h@{pack2.h}}
+\subsubsection[{pack754\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define pack754\_\-32(f)~(pack754((f), 32, 8))}}
+\label{pack2_8h_a7ec091322001cc549142e222b29b87a4}
+\hypertarget{pack2_8h_aecfbf8630d11c12a8c032a9db89d22c3}{
+\index{pack2.h@{pack2.h}!pack754\_\-64@{pack754\_\-64}}
+\index{pack754\_\-64@{pack754\_\-64}!pack2.h@{pack2.h}}
+\subsubsection[{pack754\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define pack754\_\-64(f)~(pack754((f), 64, 11))}}
+\label{pack2_8h_aecfbf8630d11c12a8c032a9db89d22c3}
+\hypertarget{pack2_8h_a65df7c687c98d17984940cb74f26d0f9}{
+\index{pack2.h@{pack2.h}!unpack754\_\-16@{unpack754\_\-16}}
+\index{unpack754\_\-16@{unpack754\_\-16}!pack2.h@{pack2.h}}
+\subsubsection[{unpack754\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define unpack754\_\-16(i)~(unpack754((i), 16, 5))}}
+\label{pack2_8h_a65df7c687c98d17984940cb74f26d0f9}
+\hypertarget{pack2_8h_ab3683c7777557e82c634055870ab74cf}{
+\index{pack2.h@{pack2.h}!unpack754\_\-32@{unpack754\_\-32}}
+\index{unpack754\_\-32@{unpack754\_\-32}!pack2.h@{pack2.h}}
+\subsubsection[{unpack754\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define unpack754\_\-32(i)~(unpack754((i), 32, 8))}}
+\label{pack2_8h_ab3683c7777557e82c634055870ab74cf}
+\hypertarget{pack2_8h_a74cf3c6c3f16ce8b7392aa06faa0eb30}{
+\index{pack2.h@{pack2.h}!unpack754\_\-64@{unpack754\_\-64}}
+\index{unpack754\_\-64@{unpack754\_\-64}!pack2.h@{pack2.h}}
+\subsubsection[{unpack754\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define unpack754\_\-64(i)~(unpack754((i), 64, 11))}}
+\label{pack2_8h_a74cf3c6c3f16ce8b7392aa06faa0eb30}
+
+
+\subsection{Function Documentation}
+\hypertarget{pack2_8h_a0e663f52efbc8593793d628b4259ce9b}{
+\index{pack2.h@{pack2.h}!main2@{main2}}
+\index{main2@{main2}!pack2.h@{pack2.h}}
+\subsubsection[{main2}]{\setlength{\rightskip}{0pt plus 5cm}int main2 ()}}
+\label{pack2_8h_a0e663f52efbc8593793d628b4259ce9b}
+\hypertarget{pack2_8h_a072cafc5116741a3b3ad633a298b052b}{
+\index{pack2.h@{pack2.h}!pack@{pack}}
+\index{pack@{pack}!pack2.h@{pack2.h}}
+\subsubsection[{pack}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int pack (unsigned char $\ast$ {\em buf}, \/  char $\ast$ {\em format}, \/   {\em ...})}}
+\label{pack2_8h_a072cafc5116741a3b3ad633a298b052b}
+\hypertarget{pack2_8h_a994460131bfe428bb6154ca212a572e7}{
+\index{pack2.h@{pack2.h}!unpack@{unpack}}
+\index{unpack@{unpack}!pack2.h@{pack2.h}}
+\subsubsection[{unpack}]{\setlength{\rightskip}{0pt plus 5cm}void unpack (unsigned char $\ast$ {\em buf}, \/  char $\ast$ {\em format}, \/   {\em ...})}}
+\label{pack2_8h_a994460131bfe428bb6154ca212a572e7}

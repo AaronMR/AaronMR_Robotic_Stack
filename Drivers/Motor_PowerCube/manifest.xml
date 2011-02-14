@@ -1,0 +1,21 @@
+<package>
+  <description brief="Motor_PowerCube">
+
+     Motor_PowerCube
+
+  </description>
+  <author>aaronmr</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Motor_PowerCube</url>
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="angles"/>
+  <depend package="tf"/>
+  <depend package="laser_geometry"/>
+
+</package>
+
+

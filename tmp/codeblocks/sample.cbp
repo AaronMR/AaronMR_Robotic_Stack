@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sample" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/sample" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-I/opt/ros/cturtle/stacks/common_msgs/nav_msgs/msg/cpp -I/opt/ros/cturtle/stacks/common_msgs/nav_msgs/srv/cpp -I/opt/ros/cturtle/stacks/common_msgs/nav_msgs/msg_gen/cpp/include -I/opt/ros/cturtle/stacks/common_msgs/nav_msgs/srv_gen/cpp/include  -I/opt/ros/cturtle/stacks/geometry/tf/include -I/opt/ros/cturtle/stacks/geometry/tf/msg/cpp -I/opt/ros/cturtle/stacks/geometry/tf/srv/cpp -I/opt/ros/cturtle/stacks/geometry/tf/msg_gen/cpp/include -I/opt/ros/cturtle/stacks/geometry/tf/srv_gen/cpp/include  -I/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/include -I/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/msg/cpp -I/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/srv/cpp -I/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/msg_gen/cpp/include -I/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/srv_gen/cpp/include  -I/opt/ros/cturtle/stacks/common_msgs/geometry_msgs/msg/cpp -I/opt/ros/cturtle/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include    -I/opt/ros/cturtle/ros/tools/rosrecord/include  -I/opt/ros/cturtle/stacks/geometry/bullet/include -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX  -I/opt/ros/cturtle/stacks/geometry/angles/include          -I/opt/ros/cturtle/ros/tools/rosbag/include  -I/opt/ros/cturtle/ros/tools/topic_tools/include -I/opt/ros/cturtle/ros/tools/topic_tools/srv_gen/cpp/include  -I/opt/ros/cturtle/ros/std_msgs/include -I/opt/ros/cturtle/ros/std_msgs/msg_gen/cpp/include  -I/opt/ros/cturtle/ros/core/message_filters/include  -I/opt/ros/cturtle/ros/test/rostest/include              -I/opt/ros/cturtle/ros/core/roscpp/include -I/opt/ros/cturtle/ros/core/roscpp/msg_gen/cpp/include -I/opt/ros/cturtle/ros/core/roscpp/srv_gen/cpp/include    -I/opt/ros/cturtle/ros/3rdparty/xmlrpcpp/src  -I/opt/ros/cturtle/ros/core/rosconsole/include  -I/opt/ros/cturtle/ros/core/roslib/include -I/opt/ros/cturtle/ros/core/roslib/msg_gen/cpp/include    -I/opt/ros/cturtle/ros/tools/rospack -I/opt/ros/cturtle/ros/tools/rospack/include" />
+					<Add directory="/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/codeblocks/" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,-rpath,/opt/ros/cturtle/stacks/geometry/tf/lib -L/opt/ros/cturtle/stacks/geometry/tf/lib -ltf -lboost_thread-mt  -L/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/lib -lsensor_msgs -Wl,-rpath,/opt/ros/cturtle/stacks/common_msgs/sensor_msgs/lib      -Wl,-rpath,/opt/ros/cturtle/ros/tools/rosrecord/lib -L/opt/ros/cturtle/ros/tools/rosrecord/lib -lrosrecorder  -L/opt/ros/cturtle/stacks/geometry/bullet/lib -Wl,-rpath,/opt/ros/cturtle/stacks/geometry/bullet/lib -lBulletDynamics -lBulletCollision -lLinearMath            -Wl,-rpath,/opt/ros/cturtle/ros/tools/rosbag/lib -L/opt/ros/cturtle/ros/tools/rosbag/lib -lrosbag  -Wl,-rpath,/opt/ros/cturtle/ros/tools/topic_tools/lib -L/opt/ros/cturtle/ros/tools/topic_tools/lib -ltopic_tools    -Wl,-rpath,/opt/ros/cturtle/ros/core/message_filters/lib -L/opt/ros/cturtle/ros/core/message_filters/lib -lmessage_filters -lboost_thread-mt -lboost_signals-mt                -Wl,-rpath,/opt/ros/cturtle/ros/core/roscpp/lib -L/opt/ros/cturtle/ros/core/roscpp/lib -lros -lboost_thread-mt -lboost_signals-mt    -Wl,-rpath,/opt/ros/cturtle/ros/3rdparty/xmlrpcpp/lib -L/opt/ros/cturtle/ros/3rdparty/xmlrpcpp/lib -lXmlRpc  -Wl,-rpath,/opt/ros/cturtle/ros/core/rosconsole/lib -L/opt/ros/cturtle/ros/core/rosconsole/lib -lrosconsole -lboost_thread-mt -llog4cxx  -Wl,-rpath,/opt/ros/cturtle/ros/core/roslib/lib -L/opt/ros/cturtle/ros/core/roslib/lib -lroslib    -L/opt/ros/cturtle/ros/tools/rospack/lib -Wl,-rpath,/opt/ros/cturtle/ros/tools/rospack/lib -lrospack -lrosstack" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/sample" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="parameters.h" />
+		<Unit filename="src/TCP_RTAI_node.cpp" />
+		<Extensions>
+			<envvars set="default" />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

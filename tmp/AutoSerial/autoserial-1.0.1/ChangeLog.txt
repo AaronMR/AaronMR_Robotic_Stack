@@ -1,0 +1,13 @@
+Version 1.0.1 (19 Feb 2009)
+-------------
+
+- Fixed a bug when deserializing complex objects
+- Fixed a bug when the number of writeBytes calls did not match the number of readBytes calls
+  when using custom serializers with MPI
+- Fixed a compilation error on Visual Studio when using arrays of const float or const double
+
+
+Version 1.0.0
+-------------
+
+Initial release

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1292240723 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/parseFile/parser/main.cpp
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdlib.h>
+

@@ -1,0 +1,19 @@
+# PCAN devices:
+#
+# special udev rules for Peak System PCAN-USB devices
+# www.peak-system.com
+#
+# klaus.hitschler@gmx.de
+#
+# $Id:$
+#
+ACTION!="add", GOTO="pcan_udev_end"
+
+KERNEL=="pcanusb*",    SYMLINK+="pcan%m", MODE="0666"
+KERNEL=="pcanpci*",    SYMLINK+="pcan%m", MODE="0666"
+KERNEL=="pcanpccard*", SYMLINK+="pcan%m", MODE="0666"
+KERNEL=="pcanisa*",    SYMLINK+="pcan%m", MODE="0666"
+KERNEL=="pcanepp*",    SYMLINK+="pcan%m", MODE="0666"
+KERNEL=="pcansp*",     SYMLINK+="pcan%m", MODE="0666"
+
+LABEL="pcan_udev_end"

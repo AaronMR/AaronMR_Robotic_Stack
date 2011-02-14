@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1296557914 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/tmp/mutexPthreads/mutexPthread/main.cpp
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+

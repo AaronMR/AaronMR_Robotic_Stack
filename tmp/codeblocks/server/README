@@ -1,0 +1,8 @@
+ 
+1 - change to root mode
+
+2 - load the modules -> ./loadmods.sh
+
+3 - ./freqtest
+
+4 - ./scope

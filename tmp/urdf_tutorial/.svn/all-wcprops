@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/wu-ros-pkg/!svn/ver/36/stacks/urdf_tools/trunk/urdf_tutorial
+END
+gazebo.launch
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/gazebo.launch
+END
+r2d2.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/r2d2.xacro
+END
+05-visual.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/05-visual.urdf
+END
+03-origins.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/03-origins.urdf
+END
+04-materials.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/04-materials.urdf
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/wu-ros-pkg/!svn/ver/36/stacks/urdf_tools/trunk/urdf_tutorial/manifest.xml
+END
+07-physics.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/07-physics.urdf
+END
+08-macroed.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/08-macroed.urdf.xacro
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/mainpage.dox
+END
+01-myfirst.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/01-myfirst.urdf
+END
+xacrodisplay.launch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/xacrodisplay.launch
+END
+06-flexible.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/06-flexible.urdf
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/Makefile
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/CMakeLists.txt
+END
+02-multipleshapes.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/02-multipleshapes.urdf
+END
+display.launch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/display.launch
+END
+urdf.vcg
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/wu-ros-pkg/!svn/ver/35/stacks/urdf_tools/trunk/urdf_tutorial/urdf.vcg
+END
