@@ -1,0 +1,17 @@
+<package>
+  <description brief="R1_teleop_joy">
+
+     R1_teleop_joy
+
+  </description>
+  <author>aaronmr</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/R1_teleop_joy</url>
+  <depend package="roscpp"/>
+  <depend package="joy"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+
