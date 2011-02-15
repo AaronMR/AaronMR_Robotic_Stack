@@ -146,5 +146,12 @@ struct Odometry
     //TwistWithCovariance twist;
 };
 
+struct struct_Template_t
+{
+    double val1;
+    double val2;
+    double val3;
+};
+
 #endif /*PARAMETERS*/
 /**********************************************************************/

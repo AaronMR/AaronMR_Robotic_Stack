@@ -11,7 +11,7 @@ struct_Twist::struct_Twist()
     havePublisher = false;
 
     ros::spinOnce();
-    cout << "raro raro" << endl;
+    //cout << "raro raro" << endl;
     sizeof_Joy = sizeof(Joy);
 
     mutex = PTHREAD_MUTEX_INITIALIZER;
