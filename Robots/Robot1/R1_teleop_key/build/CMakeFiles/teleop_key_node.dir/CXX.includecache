@@ -6,10 +6,18 @@
 
 #IncludeRegexTransform: 
 
-/home/aaronmr/ROS/AaronMR_Robotic_Stack/Robots/Robot1/R1_teleop_joy/src/teleop_joy_node.cpp
-ros/ros.h
+/home/aaronmr/ROS/AaronMR_Robotic_Stack/Robots/Robot1/R1_teleop_key/src/teleop_key_node.cpp
+termios.h
 -
-joy/Joy.h
+signal.h
+-
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+ros/ros.h
 -
 geometry_msgs/Twist.h
 -
@@ -573,22 +581,4 @@ ros/message.h
 /opt/ros/cturtle/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/ros/message.h
 ros/time.h
 /opt/ros/cturtle/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/ros/time.h
-
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/Joy.h
-string
--
-vector
--
-ostream
--
-ros/serialization.h
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/ros/serialization.h
-ros/builtin_message_traits.h
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/ros/builtin_message_traits.h
-ros/message_operations.h
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/ros/message_operations.h
-ros/message.h
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/ros/message.h
-ros/time.h
-/opt/ros/cturtle/stacks/joystick_drivers/joy/msg_gen/cpp/include/joy/ros/time.h
 

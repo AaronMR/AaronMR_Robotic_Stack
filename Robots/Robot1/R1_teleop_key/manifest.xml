@@ -1,0 +1,16 @@
+<package>
+  <description brief="R1_teleop_key">
+
+     R1_teleop_key
+
+  </description>
+  <author>aaronmr</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/R1_teleop_key</url>
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+
