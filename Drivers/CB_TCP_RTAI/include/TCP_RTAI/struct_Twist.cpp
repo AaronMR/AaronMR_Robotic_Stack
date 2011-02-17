@@ -217,20 +217,8 @@ int struct_Twist::Unserialize(char* buf3)
 */
     if(havePublisher)
     {
-        /*
-        joy_msg.buttons.resize(4);
-        joy_msg.axes.resize(4);
 
-        joy_msg.axes[0] = auxJoy2.axes[0];
-        joy_msg.axes[1] = auxJoy2.axes[1];
-        joy_msg.axes[2] = auxJoy2.axes[2];
-        joy_msg.axes[3] = auxJoy2.axes[3];
 
-        joy_msg.buttons[0] = auxJoy2.buttons[0];
-        joy_msg.buttons[1] = auxJoy2.buttons[1];
-        joy_msg.buttons[2] = auxJoy2.buttons[2];
-        joy_msg.buttons[3] = auxJoy2.buttons[3];
-        */
 
         twist_.angular.x = twist2.angular.x;
         twist_.angular.y = twist2.angular.y;
