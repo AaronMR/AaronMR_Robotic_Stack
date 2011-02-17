@@ -146,7 +146,7 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         Node2RTAI = 4;
         structToSend = new struct_Twist;
-        structToSend->set_Subscriber("twist");
+        structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }else if(configuration[0].Node2RTAI.compare("Odometry") == 0)
     {
@@ -157,13 +157,13 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         Node2RTAI = 6;
         structToSend = new struct_Joy;
-        structToSend->set_Subscriber("joy");
+        structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }else if(configuration[0].Node2RTAI.compare("Pose") == 0)
     {
         Node2RTAI = 6;
         structToSend = new struct_Pose;
-        structToSend->set_Subscriber("odom");
+        structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }
 
@@ -174,7 +174,7 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         RTAI2Node = 4;
         structToRecv = new struct_Twist;
-        structToRecv->set_Publisher("Twist_pub");
+        structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
 
     }else if(configuration[0].RTAI2Node.compare("Odometry") == 0)
     {
@@ -185,12 +185,12 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         RTAI2Node = 6;
         structToRecv = new struct_Joy;
-        structToRecv->set_Publisher("joy_pub");
+        structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }else if(configuration[0].RTAI2Node.compare("Pose") == 0)
     {
         RTAI2Node = 6;
         structToRecv = new struct_Pose;
-        structToRecv->set_Publisher("odom_pub");
+        structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }
 
         //mutex

@@ -47,6 +47,7 @@ void struct_Joy::cmdVelCallback(const joy::Joy::ConstPtr& joy)
     auxJoy1.axes[2]=joy->axes[2];
     auxJoy1.axes[3]=joy->axes[3];
 
+
     auxJoy1.buttons[0]=joy->buttons[0];
     auxJoy1.buttons[1]=joy->buttons[1];
     auxJoy1.buttons[2]=joy->buttons[2];

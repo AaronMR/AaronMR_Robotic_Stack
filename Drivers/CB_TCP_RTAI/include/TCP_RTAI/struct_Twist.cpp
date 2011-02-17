@@ -58,9 +58,17 @@ void struct_Twist::storeData(Joy *joy)
 void struct_Twist::cmdVelCallback(const geometry_msgs::Twist &msg)
 {
 
-    cout << "estoy en el callback del struct_Joy_R" << endl;
+    auxTwist1.angular.x = msg.angular.x;
+    auxTwist1.angular.y = msg.angular.y;
+    auxTwist1.angular.z = msg.angular.z;
 
-    cout << "Estoy aki dentro" << endl;
+    auxTwist1.linear.x = msg.linear.x;
+    auxTwist1.linear.y = msg.linear.y;
+    auxTwist1.linear.z = msg.linear.z;
+
+    //cout << "estoy en el callback del struct_Joy_R" << endl;
+
+    //cout << "Estoy aki dentro" << endl;
 
 
 }
@@ -97,44 +105,25 @@ int struct_Twist::serialize(char* buf3)
 	unsigned int packetsize, ps2;
 //    double maki[9];
 
-    Joy auxJoy2;
-
     Twist twist;
 
-    twist.angular.x = 1.1;
-    twist.angular.y = 2.2;
-    twist.angular.z = 3.3;
+    twist.angular.x = auxTwist1.angular.x;
+    twist.angular.y = auxTwist1.angular.y;
+    twist.angular.z = auxTwist1.angular.z;
 
-    twist.linear.x = 4.4;
-    twist.linear.y = 5.5;
-    twist.linear.z = 6.6;
-
-
-
-
-
-    auxJoy2.axes[0] = auxJoy1.axes[0];
-    auxJoy2.axes[1] = auxJoy1.axes[1];
-    auxJoy2.axes[2] = auxJoy1.axes[2];
-    auxJoy2.axes[3] = auxJoy1.axes[3];
-
-    auxJoy2.buttons[0] = auxJoy1.buttons[0];
-    auxJoy2.buttons[1] = auxJoy1.buttons[1];
-    auxJoy2.buttons[2] = auxJoy1.buttons[2];
-    auxJoy2.buttons[3] = auxJoy1.buttons[3];
-
-
-
+    twist.linear.x = auxTwist1.linear.x;
+    twist.linear.y = auxTwist1.linear.y;
+    twist.linear.z = auxTwist1.linear.z;
 
 
 	packetsize = pack(buf, "CHdddddd",    'A',
                                             0,
-                                            twist.angular.x,
-                                            twist.angular.y,
-                                            twist.angular.z,
                                             twist.linear.x,
                                             twist.linear.y,
-                                            twist.linear.z);
+                                            twist.linear.z,
+                                            twist.angular.x,
+                                            twist.angular.y,
+                                            twist.angular.z);
 
 	packi16(buf+1, packetsize); // store packet size in packet for kicks
 
@@ -144,21 +133,21 @@ int struct_Twist::serialize(char* buf3)
 
 	unpack((unsigned char*)buf3, "CHdddddd",  &magic,
                                             &ps2,
-                                            &twist.angular.x,
-                                            &twist.angular.y,
-                                            &twist.angular.z,
                                             &twist.linear.x,
                                             &twist.linear.y,
-                                            &twist.linear.z);
+                                            &twist.linear.z,
+                                            &twist.angular.x,
+                                            &twist.angular.y,
+                                            &twist.angular.z);
 
 	printf("send: '%c' %hhu %f %f %f %f %f %f\n",   magic,
                                                     ps2,
-                                                    twist.angular.x,
-                                                    twist.angular.y,
-                                                    twist.angular.z,
                                                     twist.linear.x,
                                                     twist.linear.y,
-                                                    twist.linear.z);
+                                                    twist.linear.z,
+                                                    twist.angular.x,
+                                                    twist.angular.y,
+                                                    twist.angular.z);
 
 }
 

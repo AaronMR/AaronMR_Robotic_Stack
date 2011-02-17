@@ -77,6 +77,8 @@ public:
     ros::Publisher twist_pub;
     ros::Subscriber twist_sub;
 
+
+    Twist auxTwist1;
     Joy auxJoy1;
 
     joy::Joy joy_msg;
@@ -124,7 +126,7 @@ public:
 
     int sizeof_Joy;
 
-    void cmdCallback(const geometry_msgs::Twist& joy);
+    void cmdCallback(const geometry_msgs::Pose& joy);
 
     bool haveSubscriber;
     bool havePublisher;

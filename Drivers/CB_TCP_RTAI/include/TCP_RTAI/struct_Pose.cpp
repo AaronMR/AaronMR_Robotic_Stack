@@ -60,12 +60,21 @@ void struct_Pose::storeData(Joy *joy)
 }
 
 
-void struct_Pose::cmdCallback(const geometry_msgs::Twist &msg)
+void struct_Pose::cmdCallback(const geometry_msgs::Pose& msg)
 {
 
-    cout << "estoy en el callback del struct_Joy_R" << endl;
 
-    cout << "Estoy aki dentro" << endl;
+    auxPose1.position.x = msg.position.x;
+    auxPose1.position.y = msg.position.y;
+    auxPose1.position.z = msg.position.z;
+
+    auxPose1.orientation.x = msg.orientation.x;
+    auxPose1.orientation.y = msg.orientation.y;
+    auxPose1.orientation.z = msg.orientation.z;
+    auxPose1.orientation.w = msg.orientation.w;
+    //cout << "estoy en el callback del struct_Joy_R" << endl;
+
+    //cout << "Estoy aki dentro" << endl;
 
 
 }
@@ -116,14 +125,14 @@ int struct_Pose::serialize(char* buf3)
     twist.linear.y = 5.5;
     twist.linear.z = 6.6;
 
-    pose.position.x = 7.0;
-    pose.position.y = 6.0;
-    pose.position.z = 5.0;
+    pose.position.x = auxPose1.position.x;
+    pose.position.y = auxPose1.position.y;
+    pose.position.z = auxPose1.position.z;
 
-    pose.orientation.x = 4.0;
-    pose.orientation.y = 3.0;
-    pose.orientation.z = 2.0;
-    pose.orientation.w = 1.0;
+    pose.orientation.x = auxPose1.orientation.x;
+    pose.orientation.y = auxPose1.orientation.y;
+    pose.orientation.z = auxPose1.orientation.z;
+    pose.orientation.w = auxPose1.orientation.w;
 
 
 
