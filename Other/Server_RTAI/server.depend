@@ -1,0 +1,353 @@
+# depslib dependency file v1.0
+1297682004 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/Other/Server/main.cpp
+	<fcntl.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdio.h>
+	<netinet/in.h>
+	<resolv.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<pthread.h>
+	"transmition.h"
+	"AaronMR_S.hpp"
+
+1297931872 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.h
+	"structType_C.hpp"
+
+1295628413 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parameters.h
+	<sstream>
+
+1296569335 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/AaronMR_S.hpp
+	"parameters.h"
+	<sys/socket.h>
+	<netinet/in.h>
+	"parser.h"
+
+1296560061 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1297680352 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/AaronMR_S.cpp
+	"AaronMR_S.hpp"
+	<iostream>
+	<sys/socket.h>
+	<sys/types.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<string>
+	<errno.h>
+	"pack2.hpp"
+	"transmition.h"
+	<pthread.h>
+
+1295943933 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.c
+	<stdio.h>
+	<ctype.h>
+	<stdarg.h>
+	<string.h>
+	<limits.h>
+	<float.h>
+	<assert.h>
+
+1296641708 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1295539475 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+	"SocketException.h"
+
+1295011353 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/SocketException.h
+	<string>
+
+1296473888 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.hpp
+	<stdio.h>
+	<ctype.h>
+	<stdarg.h>
+	<string.h>
+
+1297681101 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Joy_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<stdio.h>
+	<math.h>
+	<rtai_shm.h>
+
+1297946921 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Twist_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<rtai_shm.h>
+
+1297932350 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.cpp
+	<stdio.h>
+	<ctype.h>
+	<stdarg.h>
+	<string.h>
+	<limits.h>
+	<float.h>
+	<assert.h>
+
+1297943532 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+
+1265286752 /usr/realtime/include/rtai_shm.h
+	<linux/module.h>
+	<linux/version.h>
+	<linux/vmalloc.h>
+	<linux/mm.h>
+	<linux/wrapper.h>
+	<linux/mm.h>
+	<rtai.h>
+	<rtai_malloc.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<rtai_lxrt.h>
+
+1265286748 /usr/realtime/include/rtai.h
+	<linux/version.h>
+	<rtai_sanity.h>
+	<asm/rtai.h>
+
+1265286752 /usr/realtime/include/rtai_sanity.h
+
+1265286747 /usr/realtime/include/asm/rtai.h
+	<rtai_config.h>
+	<asm/rtai_hal.h>
+
+1265286748 /usr/realtime/include/rtai_config.h
+
+1265286748 /usr/realtime/include/asm/rtai_hal.h
+	<linux/version.h>
+	<rtai_hal_names.h>
+	<asm/rtai_vectors.h>
+	<rtai_types.h>
+	<linux/sched.h>
+	<linux/interrupt.h>
+	<asm/desc.h>
+	<asm/system.h>
+	<asm/io.h>
+	<asm/rtai_atomic.h>
+	<asm/rtai_fpu.h>
+	<asm/fixmap.h>
+	<asm/apic.h>
+	<rtai_trace.h>
+	<linux/kernel.h>
+	<asm/rtai_oldnames.h>
+	<asm/rtai_emulate_tsc.h>
+
+1265286749 /usr/realtime/include/rtai_hal_names.h
+	<linux/version.h>
+
+1265286748 /usr/realtime/include/asm/rtai_vectors.h
+	<linux/version.h>
+	<asm/ipipe.h>
+	<rtai_hal_names.h>
+	<rtai_config.h>
+
+1265286753 /usr/realtime/include/rtai_types.h
+	<rtai_config.h>
+	<rtai_wrappers.h>
+
+1265286754 /usr/realtime/include/rtai_wrappers.h
+	<linux/version.h>
+	<linux/module.h>
+	<linux/moduleparam.h>
+	<linux/bitops.h>
+	<linux/device.h>
+	<linux/pid.h>
+
+1265286747 /usr/realtime/include/asm/rtai_atomic.h
+	<linux/bitops.h>
+	<asm/atomic.h>
+	<asm/system.h>
+
+1265286747 /usr/realtime/include/asm/rtai_fpu.h
+	<asm/processor.h>
+
+1265286753 /usr/realtime/include/rtai_trace.h
+	<rtai_types.h>
+	<linux/trace.h>
+
+1265286748 /usr/realtime/include/asm/rtai_oldnames.h
+	<linux/irq.h>
+	<asm/desc.h>
+
+1265286748 /usr/realtime/include/asm/rtai_emulate_tsc.h
+	<linux/version.h>
+
+1265286749 /usr/realtime/include/rtai_malloc.h
+	<rtai_types.h>
+	<linux/kernel.h>
+	<linux/list.h>
+	<linux/spinlock.h>
+
+1265286749 /usr/realtime/include/rtai_lxrt.h
+	<rtai_sched.h>
+	<rtai_nam2num.h>
+	<asm/rtai_lxrt.h>
+	<sys/types.h>
+	<sys/mman.h>
+	<sched.h>
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<asm/rtai_lxrt.h>
+	<pthread.h>
+	<unistd.h>
+	<sys/mman.h>
+
+1265286752 /usr/realtime/include/rtai_sched.h
+	<rtai.h>
+	<sys/time.h>
+	<time.h>
+	<errno.h>
+	<rtai_types.h>
+	<linux/time.h>
+	<linux/errno.h>
+	<linux/rbtree.h>
+	<linux/sched.h>
+
+1265286750 /usr/realtime/include/rtai_nam2num.h
+	<rtai_types.h>
+
+1265286748 /usr/realtime/include/asm/rtai_lxrt.h
+	<linux/version.h>
+	<asm/rtai_vectors.h>
+	<asm/segment.h>
+	<asm/mmu_context.h>
+	<linux/slab.h>
+	<sys/syscall.h>
+	<unistd.h>
+
+1297943460 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/comStruc.h
+	<sstream>
+
+1297946168 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/structType.hpp
+
+1297682004 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/main.cpp
+	<fcntl.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdio.h>
+	<netinet/in.h>
+	<resolv.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<pthread.h>
+	"transmition.h"
+	"AaronMR_S.hpp"
+
+1297936527 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/structType_C.hpp
+	<ros/ros.h>
+	"comStruct.h"
+	<tf/transform_broadcaster.h>
+	<nav_msgs/Odometry.h>
+	<geometry_msgs/Twist.h>
+	<turtlesim/Velocity.h>
+	<joy/Joy.h>
+	<geometry_msgs/Point.h>
+
+1297946020 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/comStruct.h
+	<sstream>
+
+1297686519 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/transmition.h
+	"comStruc.h"
+
+1297943460 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/comStruc.h
+	<sstream>
+
+1297686491 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/AaronMR_S.hpp
+	<sys/socket.h>
+	<netinet/in.h>
+	"parser.h"
+	"comStruc.h"
+	"structType.hpp"
+
+1296560061 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/parser.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1297946168 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/structType.hpp
+
+1297680352 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/AaronMR_S.cpp
+	"AaronMR_S.hpp"
+	<iostream>
+	<sys/socket.h>
+	<sys/types.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<string>
+	<errno.h>
+	"pack2.hpp"
+	"transmition.h"
+	<pthread.h>
+
+1296473888 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/pack2.hpp
+	<stdio.h>
+	<ctype.h>
+	<stdarg.h>
+	<string.h>
+
+1297932350 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/pack2.cpp
+	<stdio.h>
+	<ctype.h>
+	<stdarg.h>
+	<string.h>
+	<limits.h>
+	<float.h>
+	<assert.h>
+
+1296641708 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/parser.cpp
+	<stdio.h>
+	<string.h>
+	"parser.h"
+
+1297959166 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/struct_Joy_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<stdio.h>
+	<math.h>
+
+1297943532 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+
+1297959175 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/struct_Twist_S.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+
+1295539475 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/transmition.cpp
+	"transmition.h"
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<errno.h>
+	<iostream>
+	"SocketException.h"
+
+1295011353 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/SocketException.h
+	<string>
+

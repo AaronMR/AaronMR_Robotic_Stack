@@ -28,7 +28,7 @@ void joyCallback( const joy::JoyConstPtr& joy_msg )
 
 int main(int argc, char** argv)
 {
-	ros::init(argc, argv, "robotino_joy_control");
+	ros::init(argc, argv, "R1_teleop_joy_node");
 	ros::NodeHandle n;
 
 	ros::Publisher  vel_pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 10);
