@@ -1,0 +1,155 @@
+% German LaTex Style File
+% by Zardoz
+% Version 1.101
+% 16-05-2000 modified to uses babel 3.6 macros for language specials (Bild, ...)
+% 29-08-2001 additional pagestyle zardoz for switching between plain and zardoz with
+%            \pagestyle{plain(zardoz)}
+% 12-09-2001 lof changed (Abb. 1.1 ....)
+% 24-09-2001 ngerman of babel 3.6z (please update your Babel system)
+
+%----- include packages
+\usepackage{babel}                  %hyphenation, language option from master document
+            %nice headings
+             %includes definition for titlepage
+%\usepackage[titles]{tocloft}        %modify lof, ...
+
+%----- default extensions for grafic inclusion 
+%\DeclareGraphicsExtensions{.eps}
+
+%----- correct SWP30 error with brackets under equations
+\newcommand{\stackunder}{\underset}
+
+%----- modify pagesetup and headings
+\textheight 22cm
+\textwidth 16cm
+\oddsidemargin 8mm
+\topmargin 0pt
+\headheight 12pt
+
+
+
+\textheight 24cm
+\textwidth 16cm
+\oddsidemargin 8mm
+\topmargin -15mm
+\headheight 1cm
+\headsep 1cm
+%----- set chapter marks in headers
+\pagestyle{fancy}                   %init fancy headers package
+
+\renewcommand{\chaptermark}[1]{%   %shows chapter left header
+% \markboth{\ \thechapter.\ #1}{}}
+ \markboth{\ \thechapter\ #1}{}}
+\renewcommand{\sectionmark}[1]{%    %shows section right header
+ \markright{\thesection.\ #1}}
+\renewcommand{\subsectionmark}[1]{%    %shows subsection right header
+% \markright{\thesubsection.\ #1}}
+ \markright{\thesubsection\ #1}}
+
+
+%----- redefine plain pagestyle
+\def\plainfoot{%
+    \ifnum \thepage>0 %
+        \bf \thepage %
+        \else \ %
+    \fi
+}
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[C]{\plainfoot}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+%----- switch to and define new pagestyle zardoz
+\fancypagestyle{zardoz}{%
+    \lhead{\leftmark} %left head
+    \rhead{\sl\rightmark \hspace*{0.5cm} \bf\thepage} % right head
+    \cfoot{}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+%\pagestyle{zardoz}
+%\pagestyle{plain}
+
+
+%----- german and ngerman names (overload babel settings)
+\addto{\captionsngerman}{
+  \renewcommand{\figurename}{Bild}
+  \renewcommand\abstractname{Vorwort}
+  \renewcommand\contentsname{Inhaltsverzeichnis}
+  \renewcommand\listfigurename{Bildverzeichnis}
+  \renewcommand\listtablename{Tabellenverzeichnis}
+  \renewcommand\chaptername{Kapitel}
+  \renewcommand\appendixname{Anhang}
+  \renewcommand\tablename{Tabelle}
+  \renewcommand\bibname{Literatur}
+}
+\addto{\captionsgerman}{
+  \renewcommand{\figurename}{Bild}
+  \renewcommand\abstractname{Vorwort}
+  \renewcommand\contentsname{Inhaltsverzeichnis}
+  \renewcommand\listfigurename{Bildverzeichnis}
+  \renewcommand\listtablename{Tabellenverzeichnis}
+  \renewcommand\chaptername{Kapitel}
+  \renewcommand\appendixname{Anhang}
+  \renewcommand\tablename{Tabelle}
+  \renewcommand\bibname{Literatur}
+}
+
+
+%\renewcommand{\cftfigleader}{Fig.} %modify lof
+%\renewcommand{\cftfigpresnum}{Abb. }
+%\addtolength{\cftfignumwidth}{1cm}
+%\usepackage[dvips]{tcigraph}       %replaces TrueTEX special \FRAME with \includegraphics
+
+
+
+%----- change numbering style for theorem like environments
+%\renewcommand\theAufgabe{\thechapter\arabic{Aufgabe}}          %remove dots in numbering
+%\renewcommand\theDefinition{\thechapter\arabic{Definition}}    %remove dots in numbering
+%\renewcommand\theSatz{\thechapter\arabic{Satz}}                %remove dots in numbering
+
+
+%----- singlelined chapterheadings //taken from report.cls and adapted
+%\def\@makechapterhead#1{%
+%  \vspace*{0\p@}%
+%  {\parindent \z@ \raggedright \normalfont
+%    \ifnum \c@secnumdepth >\m@ne
+%        \vskip 0\p@
+%    \fi
+%    \interlinepenalty\@M
+%    \Huge \bfseries \thechapter \ #1\par\nobreak
+%    \vskip 40\p@
+%  }}
+%\def\@makeschapterhead#1{%
+%  \vspace*{0\p@}%
+%  {\parindent \z@ \raggedright
+%    \normalfont
+%    \interlinepenalty\@M
+%    \Huge \bfseries  #1\par\nobreak
+%    \vskip 40\p@
+%  }}
+
+
+  \def\@makechapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \vskip 0\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries \chaptername \,\thechapter\\ \vspace*{10\p@} #1\par\nobreak
+    \vskip 40\p@
+  }
+  }
+  
+\def\@makeschapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}

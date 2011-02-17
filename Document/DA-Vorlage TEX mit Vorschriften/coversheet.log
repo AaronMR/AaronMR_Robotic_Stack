@@ -1,0 +1,638 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.18)  17 FEB 2011 17:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**coversheet.tex
+(./coversheet.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+! Undefined control sequence.
+l.89 \definecolor
+                 {mygray}{gray}{.85}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 \definecolor{m
+                   ygray}{gray}{.85}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+! Undefined control sequence.
+<argument> \color 
+                  {mygray}\rule {25cm}{2.6cm}
+l.92 ...(-2.6,5){\color{mygray}\rule{25cm}{2.6cm}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \small 
+                  UNIVERSIT\"AT
+l.93 \put(10.8,5.15){\small UNIVERSIT\"AT}
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \small 
+                  LINZ
+l.94 \put(13.62,5.15){\small LINZ}
+                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \small 
+                  JOHANNES
+l.95 \put(10.8,5.5){\small JOHANNES}
+                                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \small 
+                  KEPLER
+l.96 \put(13,5.5){\small KEPLER}
+                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \Huge 
+                 JKU
+l.97 \put(15,5.15){\Huge JKU}
+                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \includegraphics 
+                            [width=9mm]{wap_small}
+l.99 ...6){\includegraphics[width=9mm]{wap_small}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...6){\includegraphics[width=9mm]{wap_small}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 99.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 99.
+! Extra }, or forgotten $.
+<argument> \includegraphics [width=9mm]{wap_small}
+                                                  
+l.99 ...6){\includegraphics[width=9mm]{wap_small}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\put ... \hb@xt@ \z@ {\kern #1\unitlength #3\hss }
+                                                  \ignorespaces 
+l.99 ...6){\includegraphics[width=9mm]{wap_small}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> \includegraphics 
+                            [width=3cm]{tnf}
+l.100 \put(0,1){\includegraphics[width=3cm]{tnf}}
+                                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scriptsize 
+                       Technisch-Naturwissenschaftliche
+l.101 ...iptsize Technisch-Naturwissenschaftliche}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scriptsize 
+                       Fakult\"at
+l.102 \put(3.2,1.05){\scriptsize Fakult\"at}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\endpicture ->\egroup 
+                      \hss \egroup \ht \@picbox \@picht \dp \@picbox \z@ \mb...
+l.103 \end{picture}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\endpicture ->\egroup \hss \egroup 
+                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
+l.103 \end{picture}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 \end{picture}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.103 \end{picture}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.103 \end{picture}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.103 \end{picture}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.103 \end{picture}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) detected at line 103
+ []
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 89--106
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \begin{center}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 107--107
+[] 
+ []
+
+! Undefined control sequence.
+l.108 {\LARGE
+             \bfseries\title}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (21.5973pt too wide) in paragraph at lines 108--109
+ \OT1/cmss/bx/n/10 Title 
+ []
+
+
+Overfull \hbox (8.86116pt too wide) in paragraph at lines 108--109
+ \OT1/cmss/bx/n/10 of 
+ []
+
+
+Overfull \hbox (14.76395pt too wide) in paragraph at lines 108--109
+ \OT1/cmss/bx/n/10 the 
+ []
+
+
+Overfull \hbox (18.43063pt too wide) in paragraph at lines 108--109
+ \OT1/cmss/bx/n/10 the- 
+ []
+
+
+Overfull \hbox (10.98894pt too wide) in paragraph at lines 108--109
+ \OT1/cmss/bx/n/10 sis 
+ []
+
+! Undefined control sequence.
+l.110 {\Large
+             \ifcase\type DISSERTATION\or DIPLOMARBEIT\or MASTERARBEIT\fi}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (73.26414pt too wide) in paragraph at lines 110--111
+ []\OT1/cmss/m/n/10 DIPLOMARBEIT 
+ []
+
+
+Overfull \hbox (12.93059pt too wide) in paragraph at lines 112--113
+ []\OT1/cmss/m/n/10 zur 
+ []
+
+
+Overfull \hbox (12.72224pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 Er- 
+ []
+
+
+Overfull \hbox (15.69446pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 lan- 
+ []
+
+
+Overfull \hbox (20.33337pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 gung 
+ []
+
+
+Overfull \hbox (13.44444pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 des 
+ []
+
+
+Overfull \hbox (41.33339pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 akademis- 
+ []
+
+
+Overfull \hbox (19.22223pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 chen 
+ []
+
+
+Overfull \hbox (28.33339pt too wide) in paragraph at lines 112--113
+ \OT1/cmss/m/n/10 Grades 
+ []
+
+! Undefined control sequence.
+l.114 {\Large
+             \degree}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (67.69455pt too wide) in paragraph at lines 114--115
+ []\OT1/cmss/m/n/10 Diplomingenieur 
+ []
+
+
+Overfull \hbox (10.33334pt too wide) in paragraph at lines 116--117
+ []\OT1/cmss/m/n/10 im 
+ []
+
+
+Overfull \hbox (33.4445pt too wide) in paragraph at lines 116--117
+ \OT1/cmss/m/n/10 Diplom- 
+ []
+
+
+Overfull \hbox (33.2778pt too wide) in paragraph at lines 116--117
+ \OT1/cmss/m/n/10 studium 
+ []
+
+! Undefined control sequence.
+l.118 {\Large
+             \study}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (52.08347pt too wide) in paragraph at lines 118--119
+ []\OT1/cmss/m/n/10 Mechatronik 
+ []
+
+
+Overfull \hbox (66.44449pt too wide) in paragraph at lines 124--125
+[]\OT1/cmss/m/n/10 Eingereicht
+ []
+
+
+Overfull \hbox (17.5556pt too wide) in paragraph at lines 124--125
+\OT1/cmss/m/n/10 von:
+ []
+
+! Undefined control sequence.
+l.126 {\large
+             \name}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (38.16675pt too wide) in paragraph at lines 126--127
+[]\OT1/cmss/m/n/10 Max
+ []
+
+
+Overfull \hbox (32.55562pt too wide) in paragraph at lines 126--127
+\OT1/cmss/m/n/10 Muster-
+ []
+
+
+Overfull \hbox (23.08337pt too wide) in paragraph at lines 126--127
+\OT1/cmss/m/n/10 mann
+ []
+
+
+Overfull \hbox (66.80565pt too wide) in paragraph at lines 128--129
+[]\OT1/cmss/m/n/10 Angefertigt
+ []
+
+
+Overfull \hbox (15.52782pt too wide) in paragraph at lines 128--129
+\OT1/cmss/m/n/10 am:
+ []
+
+! Undefined control sequence.
+l.130 {\large
+             \institute}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (50.1667pt too wide) in paragraph at lines 130--131
+[]\OT1/cmss/m/n/10 Institut
+ []
+
+
+Overfull \hbox (11.63893pt too wide) in paragraph at lines 130--131
+\OT1/cmss/m/n/10 f^^?ur
+ []
+
+
+Overfull \hbox (32.79176pt too wide) in paragraph at lines 130--131
+\OT1/cmss/m/n/10 Robotik
+ []
+
+
+Overfull \hbox (70.63896pt too wide) in paragraph at lines 132--133
+[]\OT1/cmss/m/n/10 Beurteilung:
+ []
+
+! Undefined control sequence.
+l.134 {\large
+             \firstreferee}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (27.7778pt too wide) in paragraph at lines 134--139
+[]\OT1/cmss/m/n/10 o.
+ []
+
+
+Overfull \hbox (26.81953pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Univ.--
+ []
+
+
+Overfull \hbox (20.63896pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Prof.
+ []
+
+
+Overfull \hbox (18.41675pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Dr.--
+ []
+
+
+Overfull \hbox (15.72227pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Ing.
+ []
+
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 ha-
+ []
+
+
+Overfull \hbox (12.72223pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 bil.
+ []
+
+
+Overfull \hbox (21.97229pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Hart-
+ []
+
+
+Overfull \hbox (16.72224pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 mut
+ []
+
+
+Overfull \hbox (17.86115pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 Bre-
+ []
+
+
+Overfull \hbox (15.80559pt too wide) in paragraph at lines 134--139
+\OT1/cmss/m/n/10 mer
+ []
+
+
+Overfull \hbox (70.11125pt too wide) in paragraph at lines 140--141
+[]\OT1/cmss/m/n/10 Mitwirkung:
+ []
+
+! Undefined control sequence.
+l.142 {\large
+             \assist}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (44.27785pt too wide) in paragraph at lines 142--147
+[]\OT1/cmss/m/n/10 Name
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 142--147
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (11.97223pt too wide) in paragraph at lines 142--147
+\OT1/cmss/m/n/10 as-
+ []
+
+
+Overfull \hbox (13.38887pt too wide) in paragraph at lines 142--147
+\OT1/cmss/m/n/10 sis-
+ []
+
+
+Overfull \hbox (17.19447pt too wide) in paragraph at lines 142--147
+\OT1/cmss/m/n/10 tant
+ []
+
+! Undefined control sequence.
+l.148 {\large
+              Linz, \date}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (40.09726pt too wide) in paragraph at lines 148--149
+[]\OT1/cmss/m/n/10 Linz,
+ []
+
+
+Overfull \hbox (20.22224pt too wide) in paragraph at lines 148--149
+\OT1/cmss/m/n/10 Juni,
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 148--149
+\OT1/cmss/m/n/10 2010 
+ []
+
+)
+! Emergency stop.
+<*> coversheet.tex
+                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 31 strings out of 495061
+ 367 string characters out of 1182620
+ 47108 words of memory out of 3000000
+ 3306 multiletter control sequences out of 15000+50000
+ 4239 words of font info for 16 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 20i,6n,15p,98b,89s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
