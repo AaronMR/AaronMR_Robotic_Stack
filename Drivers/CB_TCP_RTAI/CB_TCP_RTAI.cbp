@@ -53,7 +53,6 @@
 		<Unit filename="include/TCP_RTAI/process_1.cfg" />
 		<Unit filename="include/TCP_RTAI/process_2.cfg" />
 		<Unit filename="include/TCP_RTAI/process_3.cfg" />
-		<Unit filename="include/TCP_RTAI/structType_C.cpp" />
 		<Unit filename="include/TCP_RTAI/structType_C.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Joy.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose.cpp" />

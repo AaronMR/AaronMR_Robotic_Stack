@@ -43,10 +43,10 @@ public:
 		vel_pub_ = n_.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
 		ros::NodeHandle n_private("~");
-		n_private.param("walk_vel", walk_vel, 0.1);
-		n_private.param("run_vel", run_vel, 0.3);
-		n_private.param("yaw_rate", yaw_rate, 0.1);
-		n_private.param("yaw_run_rate", yaw_rate_run, 0.3);
+		n_private.param("walk_vel", walk_vel, 0.01);
+		n_private.param("run_vel", run_vel, 0.03);
+		n_private.param("yaw_rate", yaw_rate, 0.01);
+		n_private.param("yaw_run_rate", yaw_rate_run, 0.03);
 
 	}
 
@@ -103,6 +103,7 @@ void TeleopRobotinoKeyboard::keyboardLoop()
 
 	for(;;)
 	{
+		printf("A\n");
 		// get the next event from the keyboard
 		if(read(kfd, &c, 1) < 0)
 		{
