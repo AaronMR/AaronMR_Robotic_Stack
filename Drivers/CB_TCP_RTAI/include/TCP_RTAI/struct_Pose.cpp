@@ -1,5 +1,6 @@
-#include "AaronMR_C.hpp"
+//#include "AaronMR_C.hpp"
 #include "pack2.hpp"
+#include "structType_C.hpp"
 //############################################### struct_Pose ##############################
 
 struct_Pose::struct_Pose()

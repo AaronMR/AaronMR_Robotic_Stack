@@ -6,7 +6,7 @@
 #include <arpa/inet.h>
 #include <string>
 
-#include "pack2.cpp"
+#include "pack2.hpp"
 
 #include <fcntl.h>
 

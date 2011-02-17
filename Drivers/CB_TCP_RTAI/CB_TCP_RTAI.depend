@@ -21,8 +21,8 @@
 	<iostream>
 	"SocketException.h"
 
-1295628042 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.h
-	"parameters.h"
+1297931872 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/transmition.h
+	"structType_C.hpp"
 
 1297930785 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/parameters.h
 	<sstream>
@@ -71,7 +71,7 @@
 
 1295614816 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/AaronMR.hpp
 
-1296636661 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/AaronMR_C.cpp
+1297931906 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/AaronMR_C.cpp
 	"AaronMR_C.hpp"
 	<iostream>
 	<sys/socket.h>
@@ -79,7 +79,7 @@
 	<netinet/in.h>
 	<arpa/inet.h>
 	<string>
-	"pack2.cpp"
+	"pack2.hpp"
 	<fcntl.h>
 	<sys/poll.h>
 
@@ -106,9 +106,9 @@
 
 1296473084 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Pose.hpp
 
-1296634803 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Pose.cpp
-	"AaronMR_C.hpp"
+1297931780 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Pose.cpp
 	"pack2.hpp"
+	"structType_C.hpp"
 
 1295943933 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.cpp
 	<stdio.h>
@@ -128,23 +128,23 @@
 	<float.h>
 	<assert.h>
 
-1296473888 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.hpp
+1297931521 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/pack2.hpp
 	<stdio.h>
 	<ctype.h>
 	<stdarg.h>
 	<string.h>
 
-1296639389 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Joy.cpp
-	"AaronMR_C.hpp"
+1297931766 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Joy.cpp
 	"pack2.hpp"
+	"structType_C.hpp"
 
 1297761883 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Twist.cpp
 	"AaronMR_C.hpp"
 	"pack2.hpp"
 
-1297784897 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/structType_C.hpp
+1297931398 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/structType_C.hpp
 	<ros/ros.h>
-	"parameters.h"
+	"comStruct.h"
 	<tf/transform_broadcaster.h>
 	<nav_msgs/Odometry.h>
 	<geometry_msgs/Twist.h>
@@ -154,7 +154,10 @@
 
 1297763042 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/structType_C.cpp
 
-1297785050 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Template.cpp
+1297931794 source:/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/struct_Template.cpp
 	"pack2.hpp"
 	"structType_C.hpp"
+
+1297931452 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/comStruct.h
+	<sstream>
 

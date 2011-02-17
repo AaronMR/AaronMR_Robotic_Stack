@@ -1,3 +1,6 @@
+#ifndef PACK2
+#define PACK2
+
 #include <stdio.h>
 #include <ctype.h>
 #include <stdarg.h>
@@ -34,3 +37,4 @@ void unpack(unsigned char *buf, char *format, ...);
 
 int main2();
 
+#endif

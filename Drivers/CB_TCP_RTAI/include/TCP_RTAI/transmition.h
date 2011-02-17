@@ -1,4 +1,5 @@
-#include "parameters.h"
+//#include "parameters.h"
+#include "structType_C.hpp"
 
 
 

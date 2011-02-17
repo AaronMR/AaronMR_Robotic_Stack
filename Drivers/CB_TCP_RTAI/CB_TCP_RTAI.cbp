@@ -42,6 +42,7 @@
 		<Unit filename="include/TCP_RTAI/AaronMR_C.hpp" />
 		<Unit filename="include/TCP_RTAI/ServerFile.cfg" />
 		<Unit filename="include/TCP_RTAI/SocketException.h" />
+		<Unit filename="include/TCP_RTAI/comStruct.h" />
 		<Unit filename="include/TCP_RTAI/pack2.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
