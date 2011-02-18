@@ -2,7 +2,8 @@
 	<arg name="model" default="$(find R1_urdf)/Robot_Linz.urdf"/>
 	<arg name="gui" default="True" />
 	<param name="robot_description" textfile="$(arg model)" />
-	<param name="use_gui" value="$(arg gui)"/>
+	<param name="use_gui" value="$(arg gui)"/>	
+ 	<node name="kinect_node" pkg="kinect_camera" type="kinect_node" ></node>
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
 
@@ -10,6 +11,5 @@
  	<node name="r1_odom" pkg="R1_Odom" type="r1_odom" ></node>
  	<node name="pls_node" pkg="Laser_PLS200" type="pls_node" ></node>
  	<node name="teleop_joy_node" pkg="R1_teleop_joy" type="teleop_joy_node" ></node>
- 	<node name="kinect_node" pkg="kinect_camera" type="kinect_node" ></node>
 	<node name="rviz" pkg="rviz" type="rviz" />
 </launch>

@@ -55,12 +55,9 @@
 		<Unit filename="include/TCP_RTAI/process_2.cfg" />
 		<Unit filename="include/TCP_RTAI/process_3.cfg" />
 		<Unit filename="include/TCP_RTAI/structType.hpp" />
-		<Unit filename="include/TCP_RTAI/struct_Joy.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Joy_S.cpp" />
-		<Unit filename="include/TCP_RTAI/struct_Pose.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose_S.cpp" />
-		<Unit filename="include/TCP_RTAI/struct_Twist.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Twist_S.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.h" />
