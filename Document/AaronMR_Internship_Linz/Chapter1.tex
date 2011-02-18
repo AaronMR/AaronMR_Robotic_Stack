@@ -1,0 +1,90 @@
+\chapter{Install ROS in Ubuntu}
+
+\section{Configure your Ubuntu repositories:}
+
+Configure your Ubuntu repositories to allow "restricted," "universe," and "multiverse." You can follow the Ubuntu guide ( https://help.ubuntu.com/community/Repositories/Ubuntu ) for instructions on doing this.
+
+\section{Setup your sources.list:}
+
+
+Setup your sources.list file to accept Debian packages from the ROS server.  
+
+Ubuntu 9.04 (Jaunty)
+
+sudo sh -c 'echo "deb http://code.ros.org/packages/ros/ubuntu jaunty main" > /etc/apt/sources.list.d/ros-latest.list'
+
+ 
+
+Ubuntu 9.10 (Karmic)
+
+sudo sh -c 'echo "deb http://code.ros.org/packages/ros/ubuntu karmic main" > /etc/apt/sources.list.d/ros-latest.list'
+
+Ubuntu 10.04 (Lucid)
+
+sudo sh -c 'echo "deb http://code.ros.org/packages/ros/ubuntu lucid main" > /etc/apt/sources.list.d/ros-latest.list'
+
+Ubuntu 10.10 (Maverick)
+
+sudo sh -c 'echo "deb http://code.ros.org/packages/ros/ubuntu maverick main" > /etc/apt/sources.list.d/ros-latest.list'
+
+* (In this tutorial we will use the Ubuntu 10.10)
+
+
+\section{Set up your keys:}
+
+wget http://code.ros.org/packages/ros.key -O - | sudo apt-key add -
+
+\section{Installation}
+
+Make sure you have re-indexed the ROS.org server:
+
+    * sudo apt-get update
+
+
+
+Choose your preferred install:
+
+ROS only:
+
+    * sudo apt-get install ros-cturtle-ros
+
+
+
+Base: ROS plus robot-generic stacks (e.g. navigation, visualization)
+
+    * sudo apt-get install ros-cturtle-base
+
+
+
+PR2: ROS plus PR2-specific stacks, including PR2 simulator.
+
+    * sudo apt-get install ros-cturtle-pr2
+
+
+
+PR2 All: ROS plus PR2 and bleeding edge research/experimental stacks.
+
+    * sudo apt-get install ros-cturtle-pr2all
+
+
+
+Stack-specific: You can also install a specific ROS stack (replace underscores with dashes of the stack name):
+
+    * sudo apt-get install ros-cturtle-STACK
+    * sudo apt-get install ros-cturtle-slam-gmapping
+
+\section{Environment setup}
+
+It's convenient if the ROS environment variables are automatically added to your bash session every time a new shell is launched:
+
+ echo "source /opt/ros/cturtle/setup.bash" >> ~/.bashrc
+
+ . ~/.bashrc
+
+If you just want to change the environment of your current shell, you can type:
+
+ source /opt/ros/cturtle/setup.bash
+
+And with all this, the system must be installed.
+
+
