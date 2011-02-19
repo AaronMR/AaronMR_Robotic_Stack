@@ -10,13 +10,24 @@ struct_Twist::struct_Twist()
     cout << "raro raro" << endl;
     sizeof_Joy = sizeof(Joy);
 
-    dataIN = (Twist*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Twist)) ;
-    dataOUT = (Twist*)rtai_malloc (nam2num(SHMNAM_OUT), sizeof(struct Pose)) ;
+
+    //dataIN = (Twist*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Twist)) ;
+    //dataOUT = (Twist*)rtai_malloc (nam2num(SHMNAM_OUT), sizeof(struct Pose)) ;
     pause = 100000;
     t = 0;
 
 
 }
+
+void struct_Twist::iniSHM(int shm_in, int shm_out)
+{
+    if (shm_in == 1)
+        dataIN = (Twist*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Twist)) ;
+
+    if (shm_out == 1)
+        dataOUT = (Twist*)rtai_malloc (nam2num(SHMNAM_OUT), sizeof(struct Pose)) ;
+}
+
 
 void struct_Twist::storeData(Joy *joy)
 {

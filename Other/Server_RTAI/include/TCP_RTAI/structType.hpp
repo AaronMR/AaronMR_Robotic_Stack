@@ -3,6 +3,7 @@ class structType {
 public:
     virtual char *serialize(char* maki) = 0;
     virtual char *Unserialize(char* maki) = 0;
+    virtual void iniSHM(int shm_in, int shm_out) = 0;
     void storeData();
 };
 
@@ -18,10 +19,11 @@ public:
     bool haveSubscriber;
     bool havePublisher;
 
+    void iniSHM(int shm_in, int shm_out);
     //#############
 
-    struct comStruc_IN *dataIN;
-	struct comStruc_OUT *dataOUT;
+    struct Joy *dataIN;
+	struct Joy *dataOUT;
 	float pause ;
 	float t;
 
@@ -40,6 +42,7 @@ public:
     bool haveSubscriber;
     bool havePublisher;
 
+    void iniSHM(int shm_in, int shm_out);
     //#############
 
     struct Twist *dataIN;
@@ -58,9 +61,14 @@ public:
     void storeData(Joy *joy);
     Joy auxJoy1;
 
+    void iniSHM(int shm_in, int shm_out);
+
     Pose auxPose1;
     int sizeof_Joy;
     bool haveSubscriber;
     bool havePublisher;
+
+    struct Pose *dataIN;
+	struct Pose *dataOUT;
 
 };

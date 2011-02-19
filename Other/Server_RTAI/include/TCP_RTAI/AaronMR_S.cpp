@@ -251,44 +251,104 @@ int AaronMR_S::waitEvent()
 
 int AaronMR_S::startThread(int csock)
 {
+    printf("---------------------\nReceived connection from %s\n",inet_ntoa(sadr.sin_addr));
+    cout << "---------------------------" << endl;
+
+    char buffer[1024];
+    int buffer_len = 1024;
+    int bytecount;
+    memset(buffer, 0, buffer_len);
+    DataLayout processThread;
+
+    //#########################################################
+
+    unsigned char magic;
+    char *s = "Maki";
+    unsigned int ps2;
+    char s2[96];
+    char s3[96];
+    char s4[96];
+    unsigned char buf[1024];
+
+    char maki2[1024];
+
+    //structToSend->send(hsock);
+    //cout << "maki2 = " << strlen((const char*)maki2) << endl;
+
+    if( (bytecount=recv(csock, (void*)maki2, 1024,0)) < 1)
+    {
+        fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
+        //goto FINISH;
+        exitClient(hsock);
+        return -1;
+    }
 
 
+    memcpy((unsigned char*)buf, maki2, 1024);
 
-		printf("waiting for a connection\n");
-		//csock = (int*)malloc(sizeof(int));
+    unpack((unsigned char*)buf, "CHsss",    &magic,
+                                            &ps2,
+                                            &s2,
+                                            &s3,
+                                            &s4);
 
-			printf("---------------------\nReceived connection from %s\n",inet_ntoa(sadr.sin_addr));
+    printf("recv: '%c' %hhu %s %s %s\n",    magic,
+                                            ps2,
+                                            s2,
+                                            s3,
+                                            s4);
 
-			cout << "---------------------------" << endl;
+    //#########################################################
 
-            char buffer[1024];
+    int existProcess = 0;
+    int activeProcess = 0;
+    int process2Active = -1;
+    for( int i = 0; i < numProcess ; i++)
+    {
+        if(configuration[i].name.compare(s2) == 0)
+        {
+            cout << "encontre el proceso a encender = " << s2 << endl;
+            process2Active = i;
+        }
+    }
 
-            int buffer_len = 1024;
-            int bytecount;
-            memset(buffer, 0, buffer_len);
-            DataLayout processThread;
+    //#########################################################################
 
-            //if((bytecount = recv(csock, buffer, buffer_len, 0))== -1){
-            //    fprintf(stderr, "Error receiving data %d\n", errno);
-            //    //goto FINISH;
-            //}
+    if(process2Active > -1) //(configuration[i].name.compare(s2) == 0) && (configuration[i].active == 0))
+    {
+        cout << "active =" << configuration[process2Active].active << endl;
+        if(configuration[process2Active].active == 0)
+        {
+            configuration[process2Active].active = 1;
+            existProcess = 1;
+            activeProcess = 1;
 
-            //#########################################################
+            processThread.name = configuration[process2Active].name;
+            processThread.IP_RTAI = configuration[process2Active].IP_RTAI;
+            processThread.Node2RTAI = configuration[process2Active].Node2RTAI;
+            processThread.PORT_RTAI = configuration[process2Active].PORT_RTAI;
+            processThread.RTAI2Node = configuration[process2Active].RTAI2Node;
+            processThread.SHM = configuration[process2Active].SHM;
 
-            unsigned char magic;
+            processThread.csock = configuration[process2Active].csock = csock;
+
+
+            //##########################################################
+            unsigned int packetsize, ps2;
             char *s = "Maki";
-            unsigned int ps2;
             char s2[96];
             char s3[96];
             char s4[96];
-            unsigned char buf[1024];
+            char buffer[1024];
+            packetsize = pack(buf, "CHs", 'A', 0, "Existe el proceso");
 
-            char maki2[1024];
+            packi16(buf+1, packetsize);
 
-            //structToSend->send(hsock);
-            //cout << "maki2 = " << strlen((const char*)maki2) << endl;
 
-            if( (bytecount=recv(csock, (void*)maki2, 1024,0)) < 1)
+            memcpy((unsigned char*)buffer, buf, packetsize);
+
+
+            if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
             {
                 fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
                 //goto FINISH;
@@ -296,204 +356,120 @@ int AaronMR_S::startThread(int csock)
                 return -1;
             }
 
+            unpack((unsigned char*)buffer, "CHs",   &magic,
+                                                    &ps2,
+                                                    &s2);
 
-            memcpy((unsigned char*)buf, maki2, 1024);
+            printf("send: '%c' %hhu %s\n",  magic,
+                                            ps2,
+                                            s2);
 
-            unpack((unsigned char*)buf, "CHsss",    &magic,
-                                            &ps2,
-                                            &s2,
-                                            &s3,
-                                            &s4);
-
-            printf("recv: '%c' %hhu %s %s %s\n",   magic,
-                                     ps2,
-                                     s2,
-                                     s3,
-                                     s4);
-
-            cout << configuration[0].name.data()<< s2 << endl;
-            cout << configuration[1].name.data()<< s2 << endl;
-            cout << configuration[2].name.data()<< s2 << endl;
-            //#########################################################
-
-            int existProcess = 0;
-            int activeProcess = 0;
-            int process2Active = -1;
+            //pthread_create( &thread_id, 0, &AaronMR_S::SocketHandler, (void*)&processThread);
+            pthread_create( &thread_id, 0, &AaronMR_S::SocketHandler, (void*)&configuration[process2Active]);
+            pthread_detach(thread_id);
 
 
-            for( int i = 0; i < numProcess ; i++)
+
+        }else{
+            cout << "el proceso esta activo, lo sentimos" << endl;
+
+            unsigned int packetsize, ps2;
+            char *s = "Maki";
+            char s2[96];
+            char s3[96];
+            char s4[96];
+            char buffer[1024];
+            packetsize = pack(buf, "CHs", 'E', 0, "Proceso Activo");
+
+            packi16(buf+1, packetsize);
+
+
+            memcpy((unsigned char*)buffer, buf, packetsize);
+
+
+            if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
             {
-                if(configuration[i].name.compare(s2) == 0)
-                {
-                    cout << "encontre el proceso a encender = " << s2 << endl;
-                    process2Active = i;
-                }
+                fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
+                //goto FINISH;
+                exitClient(hsock);
+                return -1;
             }
 
-            //#########################################################################
+            unpack((unsigned char*)buffer, "CHs",   &magic,
+                                                    &ps2,
+                                                    &s2);
 
-            if(process2Active > -1) //(configuration[i].name.compare(s2) == 0) && (configuration[i].active == 0))
-            {
-                cout << "active =" << configuration[process2Active].active << endl;
-                if(configuration[process2Active].active == 0)
-                {
-                    configuration[process2Active].active = 1;
-                    existProcess = 1;
-                    activeProcess = 1;
+            printf("send: '%c' %hhu %s\n",  magic,
+                                            ps2,
+                                            s2);
+        }
 
-                    cout << "Configurando hilo " << s2 << endl;
-                    processThread.name = configuration[process2Active].name;
-                    processThread.IP_RTAI = configuration[process2Active].IP_RTAI;
-                    processThread.Node2RTAI = configuration[process2Active].Node2RTAI;
-                    processThread.PORT_RTAI = configuration[process2Active].PORT_RTAI;
-                    processThread.RTAI2Node = configuration[process2Active].RTAI2Node;
-                    processThread.SHM = configuration[process2Active].SHM;
+    }
 
-                    processThread.csock = configuration[process2Active].csock = csock;
+    if(existProcess == 0)
+    {
+        cout << "no existe el proceso con nombre " << s2 << endl;
+        unsigned int packetsize, ps2;
+        char *s = "Maki";
+        char s2[96];
+        char s3[96];
+        char s4[96];
+        char buffer[1024];
+        packetsize = pack(buf, "CHs", 'E', 0, "no existe");
 
+        packi16(buf+1, packetsize);
 
-                    //##########################################################
-                    unsigned int packetsize, ps2;
-                    char *s = "Maki";
-                    char s2[96];
-                    char s3[96];
-                    char s4[96];
-                    char buffer[1024];
-                    packetsize = pack(buf, "CHs", 'A', 0, "Existe el proceso");
+        memcpy((unsigned char*)buffer, buf, packetsize);
 
-                    packi16(buf+1, packetsize);
+        if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
+        {
+            fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
+            //goto FINISH;
+            //exitClient(hsock);
+            return -1;
+        }
 
+        unpack((unsigned char*)buffer, "CHs",   &magic,
+                                                &ps2,
+                                                &s2);
 
-                    memcpy((unsigned char*)buffer, buf, packetsize);
+        printf("send: '%c' %hhu %s\n",  magic,
+                                        ps2,
+                                        s2);
+    }
 
+    if(activeProcess == 0)
+    {
+        cout << "el proceso ya esta activo " << s2 << endl;
+        unsigned int packetsize, ps2;
+        char *s = "Maki";
+        char s2[96];
+        char s3[96];
+        char s4[96];
+        char buffer[1024];
+        packetsize = pack(buf, "CHs", 'E', 0, "proceso activo");
 
-                    if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
-                    {
-                        fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
-                        //goto FINISH;
-                        exitClient(hsock);
-                        return -1;
-                    }
+        packi16(buf+1, packetsize);
 
-                    unpack((unsigned char*)buffer, "CHs",    &magic,
-                                                            &ps2,
-                                                            &s2);
-
-                    printf("send: '%c' %hhu %s\n",   magic,
-                                                     ps2,
-                                                     s2);
-
-                    //pthread_create( &thread_id, 0, &AaronMR_S::SocketHandler, (void*)&processThread);
-                    pthread_create( &thread_id, 0, &AaronMR_S::SocketHandler, (void*)&configuration[process2Active]);
-                    pthread_detach(thread_id);
-
-
-
-                }else{
-                    cout << "el proceso esta activo, lo sentimos" << endl;
-
-                    unsigned int packetsize, ps2;
-                    char *s = "Maki";
-                    char s2[96];
-                    char s3[96];
-                    char s4[96];
-                    char buffer[1024];
-                    packetsize = pack(buf, "CHs", 'E', 0, "Proceso Activo");
-
-                    packi16(buf+1, packetsize);
+        memcpy((unsigned char*)buffer, buf, packetsize);
 
 
-                    memcpy((unsigned char*)buffer, buf, packetsize);
+        if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
+        {
+            fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
+            //goto FINISH;
+            //exitClient(hsock);
+            return -1;
+        }
 
+        unpack((unsigned char*)buffer, "CHs",   &magic,
+                                                &ps2,
+                                                &s2);
 
-                    if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
-                    {
-                        fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
-                        //goto FINISH;
-                        exitClient(hsock);
-                        return -1;
-                    }
-
-                    unpack((unsigned char*)buffer, "CHs",    &magic,
-                                                            &ps2,
-                                                            &s2);
-
-                    printf("send: '%c' %hhu %s\n",   magic,
-                                                     ps2,
-                                                     s2);
-
-                }
-
-
-            }
-
-            if(existProcess == 0)
-            {
-                cout << "no existe el proceso con nombre " << s2 << endl;
-                unsigned int packetsize, ps2;
-                char *s = "Maki";
-                char s2[96];
-                char s3[96];
-                char s4[96];
-                char buffer[1024];
-                packetsize = pack(buf, "CHs", 'E', 0, "no existe");
-
-                packi16(buf+1, packetsize);
-
-
-                memcpy((unsigned char*)buffer, buf, packetsize);
-
-
-                if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
-                {
-                    fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
-                    //goto FINISH;
-                    //exitClient(hsock);
-                    return -1;
-                }
-
-                unpack((unsigned char*)buffer, "CHs",    &magic,
-                                                        &ps2,
-                                                        &s2);
-
-                printf("send: '%c' %hhu %s\n",   magic,
-                                                 ps2,
-                                                 s2);
-            }
-
-            if(activeProcess == 0)
-            {
-                cout << "el proceso ya esta activo " << s2 << endl;
-                unsigned int packetsize, ps2;
-                char *s = "Maki";
-                char s2[96];
-                char s3[96];
-                char s4[96];
-                char buffer[1024];
-                packetsize = pack(buf, "CHs", 'E', 0, "proceso activo");
-
-                packi16(buf+1, packetsize);
-
-
-                memcpy((unsigned char*)buffer, buf, packetsize);
-
-
-                if( (bytecount=send(csock, (void*)buffer, 1024,0)) < 1)
-                {
-                    fprintf(stderr, "recv_Data Error reciving data %d\n", errno);
-                    //goto FINISH;
-                    //exitClient(hsock);
-                    return -1;
-                }
-
-                unpack((unsigned char*)buffer, "CHs",    &magic,
-                                                        &ps2,
-                                                        &s2);
-
-                printf("send: '%c' %hhu %s\n",   magic,
-                                                 ps2,
-                                                 s2);
-            }
+        printf("send: '%c' %hhu %s\n",  magic,
+                                        ps2,
+                                        s2);
+    }
 }
 
 //############################################################################################
@@ -960,22 +936,26 @@ void* AaronMR_S::SocketHandler(void* lp){
     {
         //Node2RTAI = 4;
         structToRecv = new struct_Twist;
+        structToRecv->iniSHM(1, 0);
 
 
     }else if(processThread_2.Node2RTAI.compare("Odometry") == 0)
     {
         //Node2RTAI = 5;
         structToRecv = new struct_Joy;
+        structToRecv->iniSHM(1, 0);
 
     }else if(processThread_2.Node2RTAI.compare("Joy") == 0)
     {
         //Node2RTAI = 6;
         structToRecv = new struct_Joy;
+        structToRecv->iniSHM(1, 0);
 
     }else if(processThread_2.Node2RTAI.compare("Pose") == 0)
     {
         //Node2RTAI = 6;
         structToRecv = new struct_Pose;
+        structToRecv->iniSHM(1, 0);
 
     }
 
@@ -987,22 +967,25 @@ void* AaronMR_S::SocketHandler(void* lp){
     {
         //RTAI2Node = 4;
         structToSend = new struct_Twist;
-
+        structToSend->iniSHM(0,1);
 
     }else if(processThread_2.RTAI2Node.compare("Odometry") == 0)
     {
         //RTAI2Node = 5;
         structToSend = new struct_Joy;
+        structToSend->iniSHM(0,1);
 
     }else if(processThread_2.RTAI2Node.compare("Joy") == 0)
     {
         //RTAI2Node = 6;
         structToSend = new struct_Joy;
+        structToSend->iniSHM(0,1);
 
     }else if(processThread_2.RTAI2Node.compare("Pose") == 0)
     {
         //RTAI2Node = 6;
         structToSend = new struct_Pose;
+        structToSend->iniSHM(0,1);
 
     }
 

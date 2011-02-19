@@ -81,6 +81,7 @@ struct Joy // Joystick
 {
     float axes[4];
     int buttons[4];
+    bool newValue;
 };
 
 struct Joy2 // Joystick
@@ -106,6 +107,7 @@ struct Quaternion
 
 struct Pose
 {
+    bool newValue;
     Point position;
     Quaternion orientation;
 };
