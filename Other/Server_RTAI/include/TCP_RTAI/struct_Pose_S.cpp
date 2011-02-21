@@ -6,9 +6,7 @@
 
 struct_Pose::struct_Pose()
 {
-    haveSubscriber = false;
-    havePublisher = false;
-    cout << "raro raro" << endl;
+
     sizeof_Joy = sizeof(Joy);
 
     auxPose1.position.x = 0.0;
@@ -23,19 +21,21 @@ struct_Pose::struct_Pose()
 
 
 
-void struct_Pose::iniSHM(int shm_in, int shm_out)
+void struct_Pose::iniSHM(int shm_in, int shm_out, char* SHM_name)
 {
+
     if (shm_in == 1)
     {
+        printf("shm_in = %s", SHM_name);
         dataIN = (Pose*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Pose)) ;
-        dataIN->position.x = 0.0;
-        dataIN->position.y = 0.0;
-        dataIN->position.z = 0.0;
+        dataIN->position.x = 1.1;
+        dataIN->position.y = 2.0;
+        dataIN->position.z = 3.3;
 
-        dataIN->orientation.x = 0.0;
-        dataIN->orientation.y = 0.0;
-        dataIN->orientation.z = 0.0;
-        dataIN->orientation.w = 0.0;
+        dataIN->orientation.x = 4.4;
+        dataIN->orientation.y = 5.0;
+        dataIN->orientation.z = 6.0;
+        dataIN->orientation.w = 7.7;
         dataIN->newValue = 0;
 
     }
@@ -43,15 +43,16 @@ void struct_Pose::iniSHM(int shm_in, int shm_out)
 
     if (shm_out == 1)
     {
+        printf("shm_out = %s", SHM_name);
         dataOUT = (Pose*)rtai_malloc (nam2num(SHMNAM_OUT), sizeof(struct Pose)) ;
-        dataOUT->position.x = 0.0;
-        dataOUT->position.y = 0.0;
-        dataOUT->position.z = 0.0;
+        dataOUT->position.x = 1.1;
+        dataOUT->position.y = 2.0;
+        dataOUT->position.z = 3.3;
 
-        dataOUT->orientation.x = 0.0;
-        dataOUT->orientation.y = 0.0;
-        dataOUT->orientation.z = 0.0;
-        dataOUT->orientation.w = 0.0;
+        dataOUT->orientation.x = 4.4;
+        dataOUT->orientation.y = 5.0;
+        dataOUT->orientation.z = 6.0;
+        dataOUT->orientation.w = 7.7;
     }
 
 }
@@ -144,14 +145,14 @@ char *struct_Pose::Unserialize(char* buf3)
                                                     pose.orientation.z,
                                                     pose.orientation.w);
 
-    dataOUT->position.x = pose.position.x;
-    dataOUT->position.x = pose.position.y;
-    dataOUT->position.x = pose.position.z;
+    dataIN->position.x = pose.position.x;
+    dataIN->position.y = pose.position.y;
+    dataIN->position.z = pose.position.z;
 
-    dataOUT->orientation.x = pose.orientation.x;
-    dataOUT->orientation.x = pose.orientation.y;
-    dataOUT->orientation.x = pose.orientation.z;
-    dataOUT->orientation.x = pose.orientation.w;
+    dataIN->orientation.x = pose.orientation.x;
+    dataIN->orientation.y = pose.orientation.y;
+    dataIN->orientation.z = pose.orientation.z;
+    dataIN->orientation.w = pose.orientation.w;
 
     return NULL;
 }

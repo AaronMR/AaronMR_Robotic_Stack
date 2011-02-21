@@ -43,7 +43,8 @@ AaronMR_S::AaronMR_S(char * aux)
         configuration[i].PORT_RTAI = auxFile[i].PORT_RTAI.data();
         configuration[i].Publisher = auxFile[i].Publisher.data();
         configuration[i].RTAI2Node = auxFile[i].RTAI2Node.data();
-        configuration[i].SHM = auxFile[i].SHM.data();
+        configuration[i].SHM_IN = auxFile[i].SHM_IN.data();
+        configuration[i].SHM_OUT = auxFile[i].SHM_OUT.data();
         configuration[i].Subscriber = auxFile[i].Subscriber.data();
 
         //configuration[i].mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -328,14 +329,15 @@ int AaronMR_S::startThread(int csock)
             processThread.Node2RTAI = configuration[process2Active].Node2RTAI;
             processThread.PORT_RTAI = configuration[process2Active].PORT_RTAI;
             processThread.RTAI2Node = configuration[process2Active].RTAI2Node;
-            processThread.SHM = configuration[process2Active].SHM;
+            processThread.SHM_IN = configuration[process2Active].SHM_IN;
+            processThread.SHM_OUT = configuration[process2Active].SHM_OUT;
 
             processThread.csock = configuration[process2Active].csock = csock;
 
 
             //##########################################################
             unsigned int packetsize, ps2;
-            char *s = "Maki";
+
             char s2[96];
             char s3[96];
             char s4[96];
@@ -593,7 +595,8 @@ int AaronMR_S::acceptConnection()
                     processThread.Node2RTAI = configuration[process2Active].Node2RTAI;
                     processThread.PORT_RTAI = configuration[process2Active].PORT_RTAI;
                     processThread.RTAI2Node = configuration[process2Active].RTAI2Node;
-                    processThread.SHM = configuration[process2Active].SHM;
+                    processThread.SHM_IN = configuration[process2Active].SHM_IN;
+                    processThread.SHM_OUT = configuration[process2Active].SHM_OUT;
 
                     processThread.csock = configuration[process2Active].csock = csock;
 
@@ -908,7 +911,8 @@ void* AaronMR_S::SocketHandler(void* lp){
     processThread_2.Node2RTAI = temp->Node2RTAI;
     processThread_2.PORT_RTAI = temp->PORT_RTAI;
     processThread_2.RTAI2Node = temp->RTAI2Node;
-    processThread_2.SHM = temp->SHM;
+    processThread_2.SHM_IN = temp->SHM_IN;
+    processThread_2.SHM_OUT = temp->SHM_OUT;
     processThread_2.active = temp->active;
     processThread_2.csock = temp->csock;
 
@@ -936,26 +940,26 @@ void* AaronMR_S::SocketHandler(void* lp){
     {
         //Node2RTAI = 4;
         structToRecv = new struct_Twist;
-        structToRecv->iniSHM(1, 0);
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
 
     }else if(processThread_2.Node2RTAI.compare("Odometry") == 0)
     {
         //Node2RTAI = 5;
         structToRecv = new struct_Joy;
-        structToRecv->iniSHM(1, 0);
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
     }else if(processThread_2.Node2RTAI.compare("Joy") == 0)
     {
         //Node2RTAI = 6;
         structToRecv = new struct_Joy;
-        structToRecv->iniSHM(1, 0);
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
     }else if(processThread_2.Node2RTAI.compare("Pose") == 0)
     {
         //Node2RTAI = 6;
         structToRecv = new struct_Pose;
-        structToRecv->iniSHM(1, 0);
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
     }
 
@@ -967,25 +971,25 @@ void* AaronMR_S::SocketHandler(void* lp){
     {
         //RTAI2Node = 4;
         structToSend = new struct_Twist;
-        structToSend->iniSHM(0,1);
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
     }else if(processThread_2.RTAI2Node.compare("Odometry") == 0)
     {
         //RTAI2Node = 5;
         structToSend = new struct_Joy;
-        structToSend->iniSHM(0,1);
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
     }else if(processThread_2.RTAI2Node.compare("Joy") == 0)
     {
         //RTAI2Node = 6;
         structToSend = new struct_Joy;
-        structToSend->iniSHM(0,1);
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
     }else if(processThread_2.RTAI2Node.compare("Pose") == 0)
     {
         //RTAI2Node = 6;
         structToSend = new struct_Pose;
-        structToSend->iniSHM(0,1);
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
     }
 
@@ -996,7 +1000,8 @@ void* AaronMR_S::SocketHandler(void* lp){
         << "Node2RTAI = " << processThread_2.Node2RTAI << endl
         << "PORT_RTAI = " << processThread_2.PORT_RTAI << endl
         << "RTAI2Node = " << processThread_2.RTAI2Node << endl
-        << "SHM = " << processThread_2.SHM << endl
+        << "SHM_IN = " << processThread_2.SHM_IN << endl
+        << "SHM_OUT = " << processThread_2.SHM_OUT << endl
         << " = " << processThread_2.active << endl
         << " = " << processThread_2.csock << endl ;
 

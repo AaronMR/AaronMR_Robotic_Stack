@@ -58,6 +58,7 @@
 		<Unit filename="include/TCP_RTAI/struct_Pose.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Template.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Twist.cpp" />
+		<Unit filename="include/TCP_RTAI/struct_posWheels.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.h" />
 		<Unit filename="src/TCP_RTAI_node.cpp" />

@@ -189,5 +189,10 @@ struct Odometry
     //TwistWithCovariance twist;
 };
 
+struct posWheels_t
+{
+    Point pos_W[4];
+};
+
 #endif /*PARAMETERS*/
 /**********************************************************************/

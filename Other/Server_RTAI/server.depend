@@ -369,17 +369,17 @@
 1297686519 /home/aaronmr/Server_RTAI/include/TCP_RTAI/transmition.h
 	"comStruc.h"
 
-1298138934 /home/aaronmr/Server_RTAI/include/TCP_RTAI/comStruc.h
+1298286583 /home/aaronmr/Server_RTAI/include/TCP_RTAI/comStruc.h
 	<sstream>
 
-1297686491 /home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.hpp
+1298286653 /home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.hpp
 	<sys/socket.h>
 	<netinet/in.h>
 	"parser.h"
 	"comStruc.h"
-	"structType.hpp"
+	"structType_S.hpp"
 
-1296560061 /home/aaronmr/Server_RTAI/include/TCP_RTAI/parser.h
+1298280587 /home/aaronmr/Server_RTAI/include/TCP_RTAI/parser.h
 	<string>
 	<iostream>
 	<fstream>
@@ -387,9 +387,9 @@
 	<stdio.h>
 	<stdlib.h>
 
-1298138149 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType.hpp
+1298278705 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType.hpp
 
-1298137032 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.cpp
+1298281186 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.cpp
 	"AaronMR_S.hpp"
 	<iostream>
 	<sys/socket.h>
@@ -417,24 +417,24 @@
 	<float.h>
 	<assert.h>
 
-1296641708 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/parser.cpp
+1298282723 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/parser.cpp
 	<stdio.h>
 	<string.h>
 	"parser.h"
 
-1298138934 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Joy_S.cpp
+1298282780 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Joy_S.cpp
 	"AaronMR_S.hpp"
 	"pack2.hpp"
 	<stdio.h>
 	<math.h>
 	<rtai_shm.h>
 
-1298138950 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
+1298309794 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
 	"AaronMR_S.hpp"
 	"pack2.hpp"
 	<rtai_shm.h>
 
-1298136513 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Twist_S.cpp
+1298304091 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Twist_S.cpp
 	"AaronMR_S.hpp"
 	"pack2.hpp"
 	<rtai_shm.h>
@@ -450,4 +450,11 @@
 
 1295011353 /home/aaronmr/Server_RTAI/include/TCP_RTAI/SocketException.h
 	<string>
+
+1298288039 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType_S.hpp
+
+1298296684 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_posWheels.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<rtai_shm.h>
 

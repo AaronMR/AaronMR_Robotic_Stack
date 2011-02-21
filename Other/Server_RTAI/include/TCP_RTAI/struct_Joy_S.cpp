@@ -10,28 +10,16 @@
 
 struct_Joy::struct_Joy()
 {
-    haveSubscriber = false;
-    havePublisher = false;
-    cout << "raro raro" << endl;
     sizeof_Joy = sizeof(Joy);
-
-    auxJoy1.axes[0] = 0.0;
-    auxJoy1.axes[1] = 0.0;
-    auxJoy1.axes[2] = 0.0;
-    auxJoy1.axes[3] = 0.0;
-    auxJoy1.buttons[0] = 0;
-    auxJoy1.buttons[1] = 0;
-    auxJoy1.buttons[2] = 0;
-    auxJoy1.buttons[3] = 0;
 
 }
 
 
-void struct_Joy::iniSHM(int shm_in, int shm_out)
+void struct_Joy::iniSHM(int shm_in, int shm_out, char* SHM_name)
 {
     if (shm_in == 1)
     {
-        dataIN = (Joy*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Joy)) ;
+        dataIN = (Joy*)rtai_malloc (nam2num(SHM_name), sizeof(struct Joy)) ;
         dataIN->axes[0] = 0.0;
         dataIN->axes[1] = 0.0;
         dataIN->axes[2] = 0.0;
@@ -46,7 +34,7 @@ void struct_Joy::iniSHM(int shm_in, int shm_out)
 
     if (shm_out == 1)
     {
-        dataOUT = (Joy*)rtai_malloc (nam2num(SHMNAM_OUT), sizeof(struct Joy)) ;
+        dataOUT = (Joy*)rtai_malloc (nam2num(SHM_name), sizeof(struct Joy)) ;
         dataOUT->axes[0] = 0.0;
         dataOUT->axes[1] = 0.0;
         dataOUT->axes[2] = 0.0;

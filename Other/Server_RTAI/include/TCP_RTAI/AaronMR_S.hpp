@@ -4,7 +4,7 @@
 #include "parser.h"
 
 #include "comStruc.h"
-#include "structType.hpp"
+#include "structType_S.hpp"
 
 //-----------------------------------Types---------------------------------------------
 

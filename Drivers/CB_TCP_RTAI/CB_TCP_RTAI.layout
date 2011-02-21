@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="include/TCP_RTAI/AaronMR_C.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="4658" topLine="142" />
+	<File name="include/TCP_RTAI/AaronMR_C.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="5827" topLine="163" />
 	</File>
-	<File name="include/TCP_RTAI/AaronMR_C.hpp" open="1" top="0" tabpos="5">
+	<File name="include/TCP_RTAI/AaronMR_C.hpp" open="0" top="0" tabpos="5">
 		<Cursor position="21" topLine="0" />
 	</File>
 	<File name="include/TCP_RTAI/ServerFile.cfg" open="0" top="0" tabpos="7">
 		<Cursor position="199" topLine="0" />
 	</File>
-	<File name="include/TCP_RTAI/comStruct.h" open="1" top="0" tabpos="9">
-		<Cursor position="1879" topLine="112" />
+	<File name="include/TCP_RTAI/comStruct.h" open="0" top="0" tabpos="9">
+		<Cursor position="3244" topLine="171" />
 	</File>
 	<File name="include/TCP_RTAI/pack2.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="8444" topLine="331" />
@@ -34,23 +34,26 @@
 	<File name="include/TCP_RTAI/process_2.cfg" open="0" top="0" tabpos="6">
 		<Cursor position="137" topLine="0" />
 	</File>
-	<File name="include/TCP_RTAI/process_3.cfg" open="1" top="1" tabpos="8">
-		<Cursor position="54" topLine="0" />
+	<File name="include/TCP_RTAI/process_3.cfg" open="1" top="1" tabpos="3">
+		<Cursor position="81" topLine="0" />
 	</File>
 	<File name="include/TCP_RTAI/structType_C.hpp" open="1" top="0" tabpos="1">
-		<Cursor position="1712" topLine="1" />
+		<Cursor position="2408" topLine="112" />
 	</File>
-	<File name="include/TCP_RTAI/struct_Joy.cpp" open="1" top="0" tabpos="2">
+	<File name="include/TCP_RTAI/struct_Joy.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="842" topLine="141" />
 	</File>
-	<File name="include/TCP_RTAI/struct_Pose.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="2416" topLine="106" />
+	<File name="include/TCP_RTAI/struct_Pose.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1774" topLine="66" />
 	</File>
-	<File name="include/TCP_RTAI/struct_Template.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1" topLine="0" />
+	<File name="include/TCP_RTAI/struct_Template.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="151" />
 	</File>
-	<File name="include/TCP_RTAI/struct_Twist.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="4336" topLine="157" />
+	<File name="include/TCP_RTAI/struct_Twist.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="3537" topLine="120" />
+	</File>
+	<File name="include/TCP_RTAI/struct_posWheels.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="5198" topLine="144" />
 	</File>
 	<File name="include/TCP_RTAI/transmition.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="402" topLine="0" />

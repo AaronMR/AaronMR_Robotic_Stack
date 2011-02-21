@@ -14,7 +14,8 @@ struct DataLayout
 {
     int putamierda;
     string name;
-    string SHM;
+    string SHM_IN;
+    string SHM_OUT;
     string Node2RTAI;
     string RTAI2Node;
     string IP_RTAI;
