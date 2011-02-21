@@ -216,6 +216,19 @@ r1_odom/fast:
 .PHONY : r1_odom/fast
 
 #=============================================================================
+# Target rules for targets named r1_odom_2
+
+# Build rule for target.
+r1_odom_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 r1_odom_2
+.PHONY : r1_odom_2
+
+# fast build rule for target.
+r1_odom_2/fast:
+	$(MAKE) -f CMakeFiles/r1_odom_2.dir/build.make CMakeFiles/r1_odom_2.dir/build
+.PHONY : r1_odom_2/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_precompile
 
 # Build rule for target.
@@ -360,6 +373,21 @@ src/r1_odom.s:
 	$(MAKE) -f CMakeFiles/r1_odom.dir/build.make CMakeFiles/r1_odom.dir/src/r1_odom.s
 .PHONY : src/r1_odom.s
 
+# target to build an object file
+src/r1_odom_2.o:
+	$(MAKE) -f CMakeFiles/r1_odom_2.dir/build.make CMakeFiles/r1_odom_2.dir/src/r1_odom_2.o
+.PHONY : src/r1_odom_2.o
+
+# target to preprocess a source file
+src/r1_odom_2.i:
+	$(MAKE) -f CMakeFiles/r1_odom_2.dir/build.make CMakeFiles/r1_odom_2.dir/src/r1_odom_2.i
+.PHONY : src/r1_odom_2.i
+
+# target to generate assembly for a file
+src/r1_odom_2.s:
+	$(MAKE) -f CMakeFiles/r1_odom_2.dir/build.make CMakeFiles/r1_odom_2.dir/src/r1_odom_2.s
+.PHONY : src/r1_odom_2.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -376,6 +404,7 @@ help:
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
 	@echo "... r1_odom"
+	@echo "... r1_odom_2"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -390,6 +419,9 @@ help:
 	@echo "... src/r1_odom.o"
 	@echo "... src/r1_odom.i"
 	@echo "... src/r1_odom.s"
+	@echo "... src/r1_odom_2.o"
+	@echo "... src/r1_odom_2.i"
+	@echo "... src/r1_odom_2.s"
 .PHONY : help
 
 

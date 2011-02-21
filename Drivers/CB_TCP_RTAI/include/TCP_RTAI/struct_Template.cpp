@@ -13,9 +13,6 @@ struct_Template::struct_Template()
     havePublisher = false;
 
     ros::spinOnce();
-    cout << "raro raro" << endl;
-
-
 
     mutex = PTHREAD_MUTEX_INITIALIZER;
     canRecv_t = true;
@@ -23,10 +20,6 @@ struct_Template::struct_Template()
 }
 
 
-void struct_Template::storeData(Joy *joy)
-{
-    return;
-}
 
 void struct_Template::cmdCallback(const geometry_msgs::Point &data_)
 {

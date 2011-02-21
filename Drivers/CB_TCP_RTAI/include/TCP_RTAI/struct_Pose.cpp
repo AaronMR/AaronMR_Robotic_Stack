@@ -11,8 +11,8 @@ struct_Pose::struct_Pose()
     havePublisher = false;
 
     ros::spinOnce();
-    cout << "raro raro" << endl;
-    sizeof_Joy = sizeof(Joy);
+
+    //sizeof_Joy = sizeof(Joy);
 
     auxPose1.position.x = 0.0;
     auxPose1.position.y = 0.0;
@@ -88,7 +88,7 @@ void* struct_Pose::set_Subscriber(char* name)
 
 void* struct_Pose::set_Publisher(char* name)
 {
-    Pose_pub  = n.advertise<geometry_msgs::Twist>(name, 1);
+    Pose_pub  = n.advertise<geometry_msgs::Pose>(name, 1);
 
     havePublisher = true;
     return NULL;
@@ -255,34 +255,21 @@ int struct_Pose::Unserialize(char* buf3)
                                                         pose.orientation.z,
                                                         pose.orientation.w);
 
-    /*
 
-
-    Joy auxJoy2;
-	unpack(buf, "CHffffhhhh",  &magic,
-                                            &ps2,
-                                            &auxJoy2.axes[0],
-                                            &auxJoy2.axes[1],
-                                            &auxJoy2.axes[2],
-                                            &auxJoy2.axes[3],
-                                            &auxJoy2.buttons[0],
-                                            &auxJoy2.buttons[1],
-                                            &auxJoy2.buttons[2],
-                                            &auxJoy2.buttons[3]);
-
-	printf("'%c' %hhu %f %f %f %f %d %d %d %d\n",   magic,
-                                                    ps2,
-                                                    auxJoy2.axes[0],
-                                                    auxJoy2.axes[1],
-                                                    auxJoy2.axes[2],
-                                                    auxJoy2.axes[3],
-                                                    auxJoy2.buttons[0],
-                                                    auxJoy2.buttons[1],
-                                                    auxJoy2.buttons[2],
-                                                    auxJoy2.buttons[3]);
-*/
     if(havePublisher)
     {
+
+
+        pose_msg.position.x = pose.position.x;
+        pose_msg.position.y = pose.position.y;
+        pose_msg.position.z = pose.position.z;
+
+        pose_msg.orientation.x = pose.orientation.x;
+        pose_msg.orientation.y = pose.orientation.y;
+        pose_msg.orientation.z = pose.orientation.z;
+        pose_msg.orientation.w = pose.orientation.w;
+
+        Pose_pub.publish(pose_msg);
         /*
         joy_msg.buttons.resize(4);
         joy_msg.axes.resize(4);

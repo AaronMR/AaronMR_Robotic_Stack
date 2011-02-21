@@ -190,5 +190,11 @@ struct struct_Template_t
     double val3;
 };
 
+struct posWheels_t
+{
+    Point pos_W[4];
+};
+
+
 #endif /*PARAMETERS*/
 /**********************************************************************/

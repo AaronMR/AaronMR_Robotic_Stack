@@ -121,8 +121,10 @@ public:
     Joy auxJoy1;
     Pose auxPose1;
 
-    joy::Joy joy_msg;
-    geometry_msgs::Twist twist_;
+    geometry_msgs::Pose pose_msg;
+
+    //joy::Joy joy_msg;
+    //geometry_msgs::Twist twist_;
 
     int sizeof_Joy;
 
@@ -149,15 +151,13 @@ public:
 
     int serialize(char* data2s);
     int Unserialize(char* data2us);
-    void storeData(Joy *joy);
+    //void storeData(Joy *joy);
     void* set_Publisher(char* name);
     void* set_Subscriber(char* name);
 
     ros::NodeHandle n;
     ros::Publisher template_pub;
     ros::Subscriber template_sub;
-
-
 
     // struct to send and receive
     struct_Template_t data2send;
@@ -183,3 +183,33 @@ public:
     int spinOnce();
 
 };
+
+class struct_posWheels : public structType {
+
+public:
+    struct_posWheels();
+    int serialize(char* data2s);
+    int Unserialize(char* data2us);
+    void* set_Publisher(char* name);
+    void* set_Subscriber(char* name);
+
+    ros::NodeHandle n;
+    ros::Publisher posWheels_pub;
+    ros::Subscriber posWheels_sub;
+
+    // struct to send and receive
+    posWheels_t data2send;
+    posWheels_t data2recv;
+
+    geometry_msgs::Point point_msg;
+    void cmdCallback(const geometry_msgs::Point &data_);
+    bool haveSubscriber;
+    bool havePublisher;
+    pthread_mutex_t mutex;
+    bool canRecv_t;
+    bool canSend_t;
+    bool canSend();
+    bool canRecv();
+    int spinOnce();
+};
+
