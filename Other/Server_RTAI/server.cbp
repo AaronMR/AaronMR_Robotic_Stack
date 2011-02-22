@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="/home/aaronmr/ROS/AaronMR_Robotic_Stack/Drivers/CB_TCP_RTAI/include/TCP_RTAI/ServerFile.cfg" />
+				<Option parameters="/home/aaronmr/Server_RTAI/include/TCP_RTAI/ServerFile.cfg" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-L/usr/realtime/lib" />
@@ -38,12 +38,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="include/TCP_RTAI" />
+			<Add directory="/home/aaronmr/Server_RTAI/include/TCP_RTAI" />
 			<Add directory="/usr/realtime/include" />
 		</Compiler>
 		<Unit filename="include/TCP_RTAI/AaronMR_S.cpp" />
 		<Unit filename="include/TCP_RTAI/AaronMR_S.hpp" />
-		<Unit filename="include/TCP_RTAI/NO_parameters.h" />
 		<Unit filename="include/TCP_RTAI/ServerFile.cfg" />
 		<Unit filename="include/TCP_RTAI/SocketException.h" />
 		<Unit filename="include/TCP_RTAI/comStruc.h" />
@@ -54,14 +53,12 @@
 		<Unit filename="include/TCP_RTAI/process_1.cfg" />
 		<Unit filename="include/TCP_RTAI/process_2.cfg" />
 		<Unit filename="include/TCP_RTAI/process_3.cfg" />
-		<Unit filename="include/TCP_RTAI/structType.hpp" />
-		<Unit filename="include/TCP_RTAI/struct_Joy.cpp" />
+		<Unit filename="include/TCP_RTAI/structType_S.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Joy_S.cpp" />
-		<Unit filename="include/TCP_RTAI/struct_Pose.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose_S.cpp" />
-		<Unit filename="include/TCP_RTAI/struct_Twist.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Twist_S.cpp" />
+		<Unit filename="include/TCP_RTAI/struct_posWheels.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.cpp" />
 		<Unit filename="include/TCP_RTAI/transmition.h" />
 		<Unit filename="main.cpp" />

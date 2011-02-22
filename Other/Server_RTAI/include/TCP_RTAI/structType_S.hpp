@@ -77,11 +77,14 @@ public:
     char* serialize(char* data2s);
     char* Unserialize(char* data2us);
 
-    Joy auxJoy1;
+
+    posWheels_t posWheels;
+
+
+    posWheels_t auxSerialize;
+    posWheels_t auxUnSerialize;
 
     void iniSHM(int shm_in, int shm_out, char* SHM_name);
-
-    Pose auxPose1;
     int sizeof_Joy;
     bool haveSubscriber;
     bool havePublisher;

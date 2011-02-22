@@ -10,40 +10,85 @@ struct_posWheels::struct_posWheels()
     canSend_t       = true;
     mutex           = PTHREAD_MUTEX_INITIALIZER;
 
-    //ros::spinOnce();
+
+    polygon_msg.set_points_size(4);
+
+    auxSerialize.pos_W[0].x = 0.0;
+    auxSerialize.pos_W[0].y = 0.0;
+    auxSerialize.pos_W[0].z = 0.0;
+
+    auxSerialize.pos_W[1].x = 0.0;
+    auxSerialize.pos_W[1].y = 0.0;
+    auxSerialize.pos_W[1].z = 0.0;
+
+    auxSerialize.pos_W[2].x = 0.0;
+    auxSerialize.pos_W[2].y = 0.0;
+    auxSerialize.pos_W[2].z = 0.0;
+
+    auxSerialize.pos_W[3].x = 0.0;
+    auxSerialize.pos_W[3].y = 0.0;
+    auxSerialize.pos_W[3].z = 0.0;
+
+    auxUnSerialize.pos_W[0].x = 0.0;
+    auxUnSerialize.pos_W[0].y = 0.0;
+    auxUnSerialize.pos_W[0].z = 0.0;
+    auxUnSerialize.pos_W[1].x = 0.0;
+    auxUnSerialize.pos_W[1].y = 0.0;
+    auxUnSerialize.pos_W[1].z = 0.0;
+    auxUnSerialize.pos_W[2].x = 0.0;
+    auxUnSerialize.pos_W[2].y = 0.0;
+    auxUnSerialize.pos_W[2].z = 0.0;
+    auxUnSerialize.pos_W[3].x = 0.0;
+    auxUnSerialize.pos_W[3].y = 0.0;
+    auxUnSerialize.pos_W[3].z = 0.0;
 }
 
-
-
-void struct_posWheels::cmdCallback(const geometry_msgs::Point &data_)
+void struct_posWheels::cmdCallback(const geometry_msgs::Polygon &data_)
 {
-/*
+
+    auxSerialize.pos_W[0].x = data_.points[0].x;
+    auxSerialize.pos_W[0].y = data_.points[0].y;
+    auxSerialize.pos_W[0].z = data_.points[0].z;
+
+    auxSerialize.pos_W[1].x = data_.points[0].x;
+    auxSerialize.pos_W[1].y = data_.points[0].y;
+    auxSerialize.pos_W[1].z = data_.points[0].z;
+
+    auxSerialize.pos_W[2].x = data_.points[0].x;
+    auxSerialize.pos_W[2].y = data_.points[0].y;
+    auxSerialize.pos_W[2].z = data_.points[0].z;
+
+    auxSerialize.pos_W[3].x = data_.points[0].x;
+    auxSerialize.pos_W[3].y = data_.points[0].y;
+    auxSerialize.pos_W[3].z = data_.points[0].z;
+
+
     pthread_mutex_lock(&mutex);
 
     canSend_t = true;
 
     pthread_mutex_unlock(&mutex);
 
-*/
+
 }
 
 void* struct_posWheels::set_Subscriber(char* name)
 {
-    /*
+
     posWheels_sub = n.subscribe(name, 10, &struct_posWheels::cmdCallback, this);
     haveSubscriber = true;
     return NULL;
-    */
+
 }
 
 void* struct_posWheels::set_Publisher(char* name)
 {
-    /*
-    posWheels_pub  = n.advertise<geometry_msgs::Point>(name, 1);
+
+    posWheels_pub  = n.advertise<geometry_msgs::Polygon>(name, 1);
 
     havePublisher = true;
     return NULL;
-    */
+
 }
 
 
@@ -119,38 +164,20 @@ int struct_posWheels::serialize(char* data2s)
 	unsigned int packetsize;
 	unsigned int ps2;
 
-    posWheels_t aux;
-
-    aux.pos_W[0].x = 0.0;
-    aux.pos_W[0].y = 0.0;
-    aux.pos_W[0].z = 0.0;
-
-    aux.pos_W[1].x = 0.0;
-    aux.pos_W[1].y = 0.0;
-    aux.pos_W[1].z = 0.0;
-
-    aux.pos_W[2].x = 0.0;
-    aux.pos_W[2].y = 0.0;
-    aux.pos_W[2].z = 0.0;
-
-    aux.pos_W[3].x = 0.0;
-    aux.pos_W[3].y = 0.0;
-    aux.pos_W[3].z = 0.0;
-
 	packetsize = pack(buf, "CHdddddddddddd",    'A',
                                                 0,
-                                                aux.pos_W[0].x,
-                                                aux.pos_W[0].y,
-                                                aux.pos_W[0].z,
-                                                aux.pos_W[1].x,
-                                                aux.pos_W[1].y,
-                                                aux.pos_W[1].z,
-                                                aux.pos_W[2].x,
-                                                aux.pos_W[2].y,
-                                                aux.pos_W[2].z,
-                                                aux.pos_W[3].x,
-                                                aux.pos_W[3].y,
-                                                aux.pos_W[3].z);
+                                                auxSerialize.pos_W[0].x,
+                                                auxSerialize.pos_W[0].y,
+                                                auxSerialize.pos_W[0].z,
+                                                auxSerialize.pos_W[1].x,
+                                                auxSerialize.pos_W[1].y,
+                                                auxSerialize.pos_W[1].z,
+                                                auxSerialize.pos_W[2].x,
+                                                auxSerialize.pos_W[2].y,
+                                                auxSerialize.pos_W[2].z,
+                                                auxSerialize.pos_W[3].x,
+                                                auxSerialize.pos_W[3].y,
+                                                auxSerialize.pos_W[3].z);
 
 	packi16(buf+1, packetsize); // store packet size in packet for kicks
 
@@ -159,34 +186,34 @@ int struct_posWheels::serialize(char* data2s)
 
 	unpack((unsigned char*)data2s, "CHdddddddddddd", &magic,
                                             &ps2,
-                                            &aux.pos_W[0].x,
-                                            &aux.pos_W[0].y,
-                                            &aux.pos_W[0].z,
-                                            &aux.pos_W[1].x,
-                                            &aux.pos_W[1].y,
-                                            &aux.pos_W[1].z,
-                                            &aux.pos_W[2].x,
-                                            &aux.pos_W[2].y,
-                                            &aux.pos_W[2].z,
-                                            &aux.pos_W[3].x,
-                                            &aux.pos_W[3].y,
-                                            &aux.pos_W[3].z);
+                                            &auxSerialize.pos_W[0].x,
+                                            &auxSerialize.pos_W[0].y,
+                                            &auxSerialize.pos_W[0].z,
+                                            &auxSerialize.pos_W[1].x,
+                                            &auxSerialize.pos_W[1].y,
+                                            &auxSerialize.pos_W[1].z,
+                                            &auxSerialize.pos_W[2].x,
+                                            &auxSerialize.pos_W[2].y,
+                                            &auxSerialize.pos_W[2].z,
+                                            &auxSerialize.pos_W[3].x,
+                                            &auxSerialize.pos_W[3].y,
+                                            &auxSerialize.pos_W[3].z);
 
 
-	printf("send: '%c' %hhu %f %f %f %f %f %f %f %f %f %f %f %f\n",    magic,
+	printf("posWheels - send: '%c' %hhu %f %f %f %f %f %f %f %f %f %f %f %f\n",    magic,
                                             ps2,
-                                            aux.pos_W[0].x,
-                                            aux.pos_W[0].y,
-                                            aux.pos_W[0].z,
-                                            aux.pos_W[1].x,
-                                            aux.pos_W[1].y,
-                                            aux.pos_W[1].z,
-                                            aux.pos_W[2].x,
-                                            aux.pos_W[2].y,
-                                            aux.pos_W[2].z,
-                                            aux.pos_W[3].x,
-                                            aux.pos_W[3].y,
-                                            aux.pos_W[3].z);
+                                            auxSerialize.pos_W[0].x,
+                                            auxSerialize.pos_W[0].y,
+                                            auxSerialize.pos_W[0].z,
+                                            auxSerialize.pos_W[1].x,
+                                            auxSerialize.pos_W[1].y,
+                                            auxSerialize.pos_W[1].z,
+                                            auxSerialize.pos_W[2].x,
+                                            auxSerialize.pos_W[2].y,
+                                            auxSerialize.pos_W[2].z,
+                                            auxSerialize.pos_W[3].x,
+                                            auxSerialize.pos_W[3].y,
+                                            auxSerialize.pos_W[3].z);
 
 
     return 0;
@@ -201,65 +228,65 @@ int struct_posWheels::Unserialize(char* data2us)
 
     memcpy(buf, data2us, 1024);
 
-    posWheels_t aux;
-
-    aux.pos_W[0].x = 0.0;
-    aux.pos_W[0].y = 0.0;
-    aux.pos_W[0].z = 0.0;
-
-    aux.pos_W[1].x = 0.0;
-    aux.pos_W[1].y = 0.0;
-    aux.pos_W[1].z = 0.0;
-
-    aux.pos_W[2].x = 0.0;
-    aux.pos_W[2].y = 0.0;
-    aux.pos_W[2].z = 0.0;
-
-    aux.pos_W[3].x = 0.0;
-    aux.pos_W[3].y = 0.0;
-    aux.pos_W[3].z = 0.0;
-
-    unpack((unsigned char*)buf, "CHdddddddddddd",&magic,
-                                                &ps2,
-                                                &aux.pos_W[0].x,
-                                                &aux.pos_W[0].y,
-                                                &aux.pos_W[0].z,
-                                                &aux.pos_W[1].x,
-                                                &aux.pos_W[1].y,
-                                                &aux.pos_W[1].z,
-                                                &aux.pos_W[2].x,
-                                                &aux.pos_W[2].y,
-                                                &aux.pos_W[2].z,
-                                                &aux.pos_W[3].x,
-                                                &aux.pos_W[3].y,
-                                                &aux.pos_W[3].z);
+    unpack((unsigned char*)buf, "CHdddddddddddd",
+                                &magic,
+                                &ps2,
+                                &auxUnSerialize.pos_W[0].x,
+                                &auxUnSerialize.pos_W[0].y,
+                                &auxUnSerialize.pos_W[0].z,
+                                &auxUnSerialize.pos_W[1].x,
+                                &auxUnSerialize.pos_W[1].y,
+                                &auxUnSerialize.pos_W[1].z,
+                                &auxUnSerialize.pos_W[2].x,
+                                &auxUnSerialize.pos_W[2].y,
+                                &auxUnSerialize.pos_W[2].z,
+                                &auxUnSerialize.pos_W[3].x,
+                                &auxUnSerialize.pos_W[3].y,
+                                &auxUnSerialize.pos_W[3].z
+                                );
 
 
-	printf("recv: '%c' %hhu %f %f %f %f %f %f %f %f %f %f %f %f\n",
+	printf("posWheels - recv: '%c' %hhu %f %f %f %f %f %f %f %f %f %f %f %f\n",
                                             magic,
                                             ps2,
-                                            aux.pos_W[0].x,
-                                            aux.pos_W[0].y,
-                                            aux.pos_W[0].z,
-                                            aux.pos_W[1].x,
-                                            aux.pos_W[1].y,
-                                            aux.pos_W[1].z,
-                                            aux.pos_W[2].x,
-                                            aux.pos_W[2].y,
-                                            aux.pos_W[2].z,
-                                            aux.pos_W[3].x,
-                                            aux.pos_W[3].y,
-                                            aux.pos_W[3].z);
+                                            auxUnSerialize.pos_W[0].x,
+                                            auxUnSerialize.pos_W[0].y,
+                                            auxUnSerialize.pos_W[0].z,
+                                            auxUnSerialize.pos_W[1].x,
+                                            auxUnSerialize.pos_W[1].y,
+                                            auxUnSerialize.pos_W[1].z,
+                                            auxUnSerialize.pos_W[2].x,
+                                            auxUnSerialize.pos_W[2].y,
+                                            auxUnSerialize.pos_W[2].z,
+                                            auxUnSerialize.pos_W[3].x,
+                                            auxUnSerialize.pos_W[3].y,
+                                            auxUnSerialize.pos_W[3].z
+                                            );
 
-/*
+
     if(havePublisher)
     {
-        point_msg.x = aux.val1;
-        point_msg.y = aux.val2;
-        point_msg.z = aux.val3;
 
-        posWheels_pub.publish(point_msg);
+
+        polygon_msg.points[0].x = auxUnSerialize.pos_W[0].x;
+        polygon_msg.points[0].y = auxUnSerialize.pos_W[0].y;
+        polygon_msg.points[0].z = auxUnSerialize.pos_W[0].z;
+
+        polygon_msg.points[1].x = auxUnSerialize.pos_W[1].x;
+        polygon_msg.points[1].y = auxUnSerialize.pos_W[1].y;
+        polygon_msg.points[1].z = auxUnSerialize.pos_W[1].z;
+
+        polygon_msg.points[2].x = auxUnSerialize.pos_W[2].x;
+        polygon_msg.points[2].y = auxUnSerialize.pos_W[2].y;
+        polygon_msg.points[2].z = auxUnSerialize.pos_W[2].z;
+
+        polygon_msg.points[3].x = auxUnSerialize.pos_W[3].x;
+        polygon_msg.points[3].y = auxUnSerialize.pos_W[3].y;
+        polygon_msg.points[3].z = auxUnSerialize.pos_W[3].z;
+
+        posWheels_pub.publish(polygon_msg);
+
     }
-    */
+
     return 0;
 }

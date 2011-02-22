@@ -8,6 +8,7 @@
 #include <joy/Joy.h>
 
 #include <geometry_msgs/Point.h>
+#include <geometry_msgs/Polygon.h>
 //-----------------------------------Types---------------------------------------------
 class structType {
 public:
@@ -201,8 +202,13 @@ public:
     posWheels_t data2send;
     posWheels_t data2recv;
 
-    geometry_msgs::Point point_msg;
-    void cmdCallback(const geometry_msgs::Point &data_);
+
+    posWheels_t auxSerialize;
+    posWheels_t auxUnSerialize;
+
+    geometry_msgs::Polygon polygon_msg;
+
+    void cmdCallback(const geometry_msgs::Polygon &data_);
     bool haveSubscriber;
     bool havePublisher;
     pthread_mutex_t mutex;

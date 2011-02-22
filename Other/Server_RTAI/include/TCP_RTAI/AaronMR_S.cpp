@@ -961,6 +961,12 @@ void* AaronMR_S::SocketHandler(void* lp){
         structToRecv = new struct_Pose;
         structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
+    }else if(processThread_2.Node2RTAI.compare("posWheels") == 0)
+    {
+        //Node2RTAI = 6;
+        structToRecv = new struct_posWheels;
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
+
     }
 
 
@@ -990,7 +996,11 @@ void* AaronMR_S::SocketHandler(void* lp){
         //RTAI2Node = 6;
         structToSend = new struct_Pose;
         structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
-
+    }else if(processThread_2.RTAI2Node.compare("posWheels") == 0)
+    {
+        //RTAI2Node = 6;
+        structToSend = new struct_posWheels;
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
     }
 
     counter = counter + 1;

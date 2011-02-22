@@ -170,7 +170,7 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         //Node2RTAI = 6;
         structToSend = new struct_posWheels;
-        //structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
+        structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }
 
@@ -204,7 +204,7 @@ AaronMR_C::AaronMR_C(char * aux)
     {
         //RTAI2Node = 6;
         structToRecv = new struct_posWheels;
-        //structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
+        structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }
 
         //mutex
