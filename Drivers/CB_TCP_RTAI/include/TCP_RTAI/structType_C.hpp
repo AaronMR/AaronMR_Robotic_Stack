@@ -1,5 +1,4 @@
 #include <ros/ros.h>
-//#include "parameters.h"
 #include "comStruct.h"
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
@@ -9,6 +8,7 @@
 
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/Polygon.h>
+
 //-----------------------------------Types---------------------------------------------
 class structType {
 public:
@@ -188,6 +188,7 @@ public:
 class struct_posWheels : public structType {
 
 public:
+
     struct_posWheels();
     int serialize(char* data2s);
     int Unserialize(char* data2us);
@@ -219,3 +220,39 @@ public:
     int spinOnce();
 };
 
+class struct_Odometry : public structType {
+
+public:
+
+    struct_Odometry();
+
+    int serialize(char* data2s);
+    int Unserialize(char* data2us);
+
+    void* set_Publisher(char* name);
+    void* set_Subscriber(char* name);
+
+    ros::NodeHandle n;
+    ros::Publisher odometry_pub;
+    ros::Subscriber odometry_sub;
+
+    // struct to send and receive
+    odometry_t data2send;
+    odometry_t data2recv;
+
+
+    odometry_t auxSerialize;
+    odometry_t auxUnSerialize;
+
+    nav_msgs::Odometry odometry_msg;
+
+    void cmdCallback(const nav_msgs::Odometry &data_);
+    bool haveSubscriber;
+    bool havePublisher;
+    pthread_mutex_t mutex;
+    bool canRecv_t;
+    bool canSend_t;
+    bool canSend();
+    bool canRecv();
+    int spinOnce();
+};

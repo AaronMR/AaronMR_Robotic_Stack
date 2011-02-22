@@ -175,12 +175,12 @@ struct TwistWithCovariance
     double covariance[36];
 };
 
-struct Odometry
+struct odometry_t
 {
     //Header header;  // Falta por hacer el Header
     //string child_frame_id;
     PoseWithCovariance pose;
-    //TwistWithCovariance twist;
+    TwistWithCovariance twist;
 };
 
 struct struct_Template_t

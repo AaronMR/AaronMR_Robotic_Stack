@@ -144,70 +144,60 @@ AaronMR_C::AaronMR_C(char * aux)
     // Configure type of struct to send
     if(configuration[0].Node2RTAI.compare("Twist") == 0)
     {
-        //Node2RTAI = 4;
         structToSend = new struct_Twist;
         structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
-    }else if(configuration[0].Node2RTAI.compare("Odometry") == 0)
+    }else if(configuration[0].Node2RTAI.compare("odom") == 0)
     {
-        //Node2RTAI = 5;
-        structToSend = new struct_Joy;
+        structToSend = new struct_Odometry;
+        structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }else if(configuration[0].Node2RTAI.compare("Joy") == 0)
     {
-        //Node2RTAI = 6;
         structToSend = new struct_Joy;
         structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }else if(configuration[0].Node2RTAI.compare("Pose") == 0)
     {
-        //Node2RTAI = 6;
         structToSend = new struct_Pose;
         structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }
     else if(configuration[0].Node2RTAI.compare("posWheels") == 0)
     {
-        //Node2RTAI = 6;
         structToSend = new struct_posWheels;
         structToSend->set_Subscriber((char*)configuration[0].Subscriber.data());
 
     }
 
-//    const char* RTAI2Node_ = configuration[0].RTAI2Node.data();
-
 
     // configure type of struct to receive
     if(configuration[0].RTAI2Node.compare("Twist") == 0)
     {
-        //RTAI2Node = 4;
         structToRecv = new struct_Twist;
         structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
 
-    }else if(configuration[0].RTAI2Node.compare("Odometry") == 0)
+    }else if(configuration[0].RTAI2Node.compare("odom") == 0)
     {
-        //RTAI2Node = 5;
-        structToRecv = new struct_Joy;
+        structToRecv = new struct_Odometry;
+        structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
 
     }else if(configuration[0].RTAI2Node.compare("Joy") == 0)
     {
-        //RTAI2Node = 6;
         structToRecv = new struct_Joy;
         structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }else if(configuration[0].RTAI2Node.compare("Pose") == 0)
     {
-        //RTAI2Node = 6;
         structToRecv = new struct_Pose;
         structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }
     else if(configuration[0].RTAI2Node.compare("posWheels") == 0)
     {
-        //RTAI2Node = 6;
         structToRecv = new struct_posWheels;
         structToRecv->set_Publisher((char*)configuration[0].Publisher.data());
     }
 
-        //mutex
+    //mutex
     configuration[0].mutex = PTHREAD_MUTEX_INITIALIZER;
     configuration[0].canRecv = false;
     configuration[0].canSend = false;
