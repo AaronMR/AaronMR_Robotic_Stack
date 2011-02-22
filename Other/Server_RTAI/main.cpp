@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#include "transmition.h"
+//#include "transmition.h"
 //#include "parameters.h"
 
 #include "AaronMR_S.hpp"

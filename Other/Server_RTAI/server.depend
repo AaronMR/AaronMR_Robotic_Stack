@@ -351,7 +351,7 @@
 1295011353 /home/aaronmr/ROS/AaronMR_Robotic_Stack/Other/Server_RTAI/include/TCP_RTAI/SocketException.h
 	<string>
 
-1297682004 source:/home/aaronmr/Server_RTAI/main.cpp
+1298377242 source:/home/aaronmr/Server_RTAI/main.cpp
 	<fcntl.h>
 	<string.h>
 	<stdlib.h>
@@ -363,13 +363,12 @@
 	<arpa/inet.h>
 	<unistd.h>
 	<pthread.h>
-	"transmition.h"
 	"AaronMR_S.hpp"
 
 1297686519 /home/aaronmr/Server_RTAI/include/TCP_RTAI/transmition.h
 	"comStruc.h"
 
-1298286583 /home/aaronmr/Server_RTAI/include/TCP_RTAI/comStruc.h
+1298387486 /home/aaronmr/Server_RTAI/include/TCP_RTAI/comStruc.h
 	<sstream>
 
 1298286653 /home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.hpp
@@ -389,7 +388,7 @@
 
 1298278705 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType.hpp
 
-1298365115 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.cpp
+1298387452 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/AaronMR_S.cpp
 	"AaronMR_S.hpp"
 	<iostream>
 	<sys/socket.h>
@@ -399,7 +398,6 @@
 	<string>
 	<errno.h>
 	"pack2.hpp"
-	"transmition.h"
 	<pthread.h>
 
 1296473888 /home/aaronmr/Server_RTAI/include/TCP_RTAI/pack2.hpp
@@ -429,7 +427,7 @@
 	<math.h>
 	<rtai_shm.h>
 
-1298309794 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
+1298381780 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Pose_S.cpp
 	"AaronMR_S.hpp"
 	"pack2.hpp"
 	<rtai_shm.h>
@@ -451,10 +449,22 @@
 1295011353 /home/aaronmr/Server_RTAI/include/TCP_RTAI/SocketException.h
 	<string>
 
-1298365700 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType_S.hpp
+1298383591 /home/aaronmr/Server_RTAI/include/TCP_RTAI/structType_S.hpp
 
-1298371063 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_posWheels.cpp
+1298371303 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_posWheels.cpp
 	"AaronMR_S.hpp"
 	"pack2.hpp"
+	<rtai_shm.h>
+
+1298388027 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_Odometry.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<rtai_shm.h>
+
+1298385896 source:/home/aaronmr/Server_RTAI/include/TCP_RTAI/struct_comStruc.cpp
+	"AaronMR_S.hpp"
+	"pack2.hpp"
+	<stdio.h>
+	<math.h>
 	<rtai_shm.h>
 

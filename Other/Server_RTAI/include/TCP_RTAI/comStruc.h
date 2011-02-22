@@ -19,6 +19,12 @@
 
 using namespace std;
 
+struct Point
+{
+    double x;
+    double y;
+    double z;
+};
 
 struct comStruc_IN
 {
@@ -33,17 +39,7 @@ struct comStruc_IN
 	bool newValue; // flag to true, when have new value
 };
 
-struct comStruc_OUT
-{
-	double x1;
-	double y1;
-    double x2;
-	double y2;
-    int a;
-	int b;
-    int c;
-	int d;
-};
+
 
 struct data_str // OK
 {
@@ -90,12 +86,7 @@ struct Joy2 // Joystick
     int buttons[4];
 };
 
-struct Point
-{
-    double x;
-    double y;
-    double z;
-};
+
 
 struct Quaternion
 {
@@ -110,6 +101,12 @@ struct Pose
     bool newValue;
     Point position;
     Quaternion orientation;
+};
+
+struct comStruc_OUT
+{
+	struct Point position;
+    struct Quaternion orientation;
 };
 
 struct Vector3
@@ -160,7 +157,7 @@ struct Header
 struct PoseWithCovariance
 {
     // This represents a pose in free space with uncertainty.
-    Pose pose;
+    struct Pose pose;
 
     // Row-major representation of the 6x6 covariance matrix
     // The orientation parameters use a fixed-axis representation.
@@ -172,7 +169,7 @@ struct PoseWithCovariance
 struct TwistWithCovariance
 {
     // This expresses velocity in free space with uncertianty.
-    Twist twist;
+    struct Twist twist;
 
     // Row-major representation of the 6x6 covariance matrix
     // The orientation parameters use a fixed-axis representation.
@@ -181,12 +178,11 @@ struct TwistWithCovariance
     double covariance[36];
 };
 
-struct Odometry
+struct odometry_t
 {
-    //Header header;  // Falta por hacer el Header
-    //string child_frame_id;
-    PoseWithCovariance pose;
-    //TwistWithCovariance twist;
+
+    struct PoseWithCovariance pose;
+    struct TwistWithCovariance twist;
 };
 
 struct posWheels_t

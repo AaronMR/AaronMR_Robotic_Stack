@@ -55,12 +55,12 @@
 		<Unit filename="include/TCP_RTAI/process_3.cfg" />
 		<Unit filename="include/TCP_RTAI/structType_S.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Joy_S.cpp" />
+		<Unit filename="include/TCP_RTAI/struct_Odometry.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose.hpp" />
 		<Unit filename="include/TCP_RTAI/struct_Pose_S.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_Twist_S.cpp" />
+		<Unit filename="include/TCP_RTAI/struct_comStruc.cpp" />
 		<Unit filename="include/TCP_RTAI/struct_posWheels.cpp" />
-		<Unit filename="include/TCP_RTAI/transmition.cpp" />
-		<Unit filename="include/TCP_RTAI/transmition.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />

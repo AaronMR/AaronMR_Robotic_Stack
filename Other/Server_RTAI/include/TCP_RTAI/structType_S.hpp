@@ -7,6 +7,30 @@ public:
     void storeData();
 };
 
+class struct_comStruc : public structType {
+public:
+    struct_comStruc();
+
+    char* serialize(char* maki);
+    char* Unserialize(char* maki);
+    void storeData(Joy *joy);
+    Joy auxJoy1;
+    int sizeof_Joy;
+    bool haveSubscriber;
+    bool havePublisher;
+
+    void iniSHM(int shm_in, int shm_out, char* SHM_name);
+    //#############
+
+    struct comStruc_IN *dataIN;
+	struct comStruc_OUT *dataOUT;
+	float pause ;
+	float t;
+
+    //##############
+
+};
+
 class struct_Joy : public structType {
 public:
     struct_Joy();
@@ -93,3 +117,27 @@ public:
 	struct posWheels_t *dataOUT;
 
 };
+
+class struct_Odometry : public structType {
+public:
+    struct_Odometry();
+    char* serialize(char* data2s);
+    char* Unserialize(char* data2us);
+
+
+    odometry_t posWheels;
+
+
+    odometry_t auxSerialize;
+    odometry_t auxUnSerialize;
+
+    void iniSHM(int shm_in, int shm_out, char* SHM_name);
+    int sizeof_Joy;
+    bool haveSubscriber;
+    bool havePublisher;
+
+    struct odometry_t *dataIN;
+	struct odometry_t *dataOUT;
+
+};
+

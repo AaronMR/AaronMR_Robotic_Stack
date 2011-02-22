@@ -28,14 +28,14 @@ void struct_Pose::iniSHM(int shm_in, int shm_out, char* SHM_name)
     {
         printf("shm_in = %s", SHM_name);
         dataIN = (Pose*)rtai_malloc (nam2num(SHMNAM_IN), sizeof(struct Pose)) ;
-        dataIN->position.x = 1.1;
-        dataIN->position.y = 2.0;
-        dataIN->position.z = 3.3;
+        dataIN->position.x = 0.0;
+        dataIN->position.y = 0.0;
+        dataIN->position.z = 0.0;
 
-        dataIN->orientation.x = 4.4;
-        dataIN->orientation.y = 5.0;
-        dataIN->orientation.z = 6.0;
-        dataIN->orientation.w = 7.7;
+        dataIN->orientation.x = 0.0;
+        dataIN->orientation.y = 0.0;
+        dataIN->orientation.z = 0.0;
+        dataIN->orientation.w = 0.0;
         dataIN->newValue = 0;
 
     }

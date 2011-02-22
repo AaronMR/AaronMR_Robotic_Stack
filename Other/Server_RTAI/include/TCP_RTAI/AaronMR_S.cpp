@@ -7,7 +7,7 @@
 #include <string>
 #include <errno.h>
 #include "pack2.hpp"
-#include "transmition.h"
+//#include "transmition.h"
 
 #include <pthread.h>
 
@@ -264,7 +264,7 @@ int AaronMR_S::startThread(int csock)
     //#########################################################
 
     unsigned char magic;
-    char *s = "Maki";
+//    char *s = "Maki";
     unsigned int ps2;
     char s2[96];
     char s3[96];
@@ -339,8 +339,8 @@ int AaronMR_S::startThread(int csock)
             unsigned int packetsize, ps2;
 
             char s2[96];
-            char s3[96];
-            char s4[96];
+            //char s3[96];
+            //char s4[96];
             char buffer[1024];
             packetsize = pack(buf, "CHs", 'A', 0, "Existe el proceso");
 
@@ -376,10 +376,10 @@ int AaronMR_S::startThread(int csock)
             cout << "el proceso esta activo, lo sentimos" << endl;
 
             unsigned int packetsize, ps2;
-            char *s = "Maki";
+//            char *s = "Maki";
             char s2[96];
-            char s3[96];
-            char s4[96];
+//            char s3[96];
+//            char s4[96];
             char buffer[1024];
             packetsize = pack(buf, "CHs", 'E', 0, "Proceso Activo");
 
@@ -412,10 +412,10 @@ int AaronMR_S::startThread(int csock)
     {
         cout << "no existe el proceso con nombre " << s2 << endl;
         unsigned int packetsize, ps2;
-        char *s = "Maki";
+//        char *s = "Maki";
         char s2[96];
-        char s3[96];
-        char s4[96];
+//        char s3[96];
+//        char s4[96];
         char buffer[1024];
         packetsize = pack(buf, "CHs", 'E', 0, "no existe");
 
@@ -444,10 +444,10 @@ int AaronMR_S::startThread(int csock)
     {
         cout << "el proceso ya esta activo " << s2 << endl;
         unsigned int packetsize, ps2;
-        char *s = "Maki";
+//        char *s = "Maki";
         char s2[96];
-        char s3[96];
-        char s4[96];
+//        char s3[96];
+//        char s4[96];
         char buffer[1024];
         packetsize = pack(buf, "CHs", 'E', 0, "proceso activo");
 
@@ -524,7 +524,7 @@ int AaronMR_S::acceptConnection()
             //#########################################################
 
             unsigned char magic;
-            char *s = "Maki";
+//            char *s = "Maki";
             unsigned int ps2;
             char s2[96];
             char s3[96];
@@ -603,10 +603,10 @@ int AaronMR_S::acceptConnection()
 
                     //##########################################################
                     unsigned int packetsize, ps2;
-                    char *s = "Maki";
+//                    char *s = "Maki";
                     char s2[96];
-                    char s3[96];
-                    char s4[96];
+//                    char s3[96];
+//                    char s4[96];
                     char buffer[1024];
                     packetsize = pack(buf, "CHs", 'A', 0, "Existe el proceso");
 
@@ -654,10 +654,10 @@ int AaronMR_S::acceptConnection()
                     cout << "el proceso esta activo, lo sentimos" << endl;
 
                     unsigned int packetsize, ps2;
-                    char *s = "Maki";
+//                    char *s = "Maki";
                     char s2[96];
-                    char s3[96];
-                    char s4[96];
+//                    char s3[96];
+//                    char s4[96];
                     char buffer[1024];
                     packetsize = pack(buf, "CHs", 'E', 0, "Proceso Activo");
 
@@ -767,10 +767,10 @@ int AaronMR_S::acceptConnection()
             {
                 cout << "no existe el proceso con nombre " << s2 << endl;
                 unsigned int packetsize, ps2;
-                char *s = "Maki";
+//                char *s = "Maki";
                 char s2[96];
-                char s3[96];
-                char s4[96];
+//                char s3[96];
+//                char s4[96];
                 char buffer[1024];
                 packetsize = pack(buf, "CHs", 'E', 0, "no existe");
 
@@ -801,10 +801,10 @@ int AaronMR_S::acceptConnection()
             {
                 cout << "el proceso ya esta activo " << s2 << endl;
                 unsigned int packetsize, ps2;
-                char *s = "Maki";
+//                char *s = "Maki";
                 char s2[96];
-                char s3[96];
-                char s4[96];
+//                char s3[96];
+//                char s4[96];
                 char buffer[1024];
                 packetsize = pack(buf, "CHs", 'E', 0, "proceso activo");
 
@@ -924,7 +924,7 @@ void* AaronMR_S::SocketHandler(void* lp){
 //    int processFind = 0;
 
 
-    transmision socketRTAI(csock);
+   // transmision socketRTAI(csock);
 
     structType* structToSend;
     structType* structToRecv;
@@ -943,10 +943,10 @@ void* AaronMR_S::SocketHandler(void* lp){
         structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
 
-    }else if(processThread_2.Node2RTAI.compare("Odometry") == 0)
+    }else if(processThread_2.Node2RTAI.compare("odom") == 0)
     {
         //Node2RTAI = 5;
-        structToRecv = new struct_Joy;
+        structToRecv = new struct_Odometry;
         structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
     }else if(processThread_2.Node2RTAI.compare("Joy") == 0)
@@ -967,6 +967,12 @@ void* AaronMR_S::SocketHandler(void* lp){
         structToRecv = new struct_posWheels;
         structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
 
+    }else if(processThread_2.Node2RTAI.compare("comStruc") == 0)
+    {
+        //Node2RTAI = 6;
+        structToRecv = new struct_comStruc;
+        structToRecv->iniSHM(1, 0, (char*)processThread_2.SHM_IN.data());
+
     }
 
 
@@ -979,10 +985,10 @@ void* AaronMR_S::SocketHandler(void* lp){
         structToSend = new struct_Twist;
         structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
-    }else if(processThread_2.RTAI2Node.compare("Odometry") == 0)
+    }else if(processThread_2.RTAI2Node.compare("odom") == 0)
     {
         //RTAI2Node = 5;
-        structToSend = new struct_Joy;
+        structToSend = new struct_Odometry;
         structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
 
     }else if(processThread_2.RTAI2Node.compare("Joy") == 0)
@@ -1001,7 +1007,14 @@ void* AaronMR_S::SocketHandler(void* lp){
         //RTAI2Node = 6;
         structToSend = new struct_posWheels;
         structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
+    }else if(processThread_2.RTAI2Node.compare("comStruc") == 0)
+    {
+        //RTAI2Node = 6;
+        structToSend = new struct_comStruc;
+        structToSend->iniSHM(0,1, (char*)processThread_2.SHM_OUT.data());
     }
+
+
 
     counter = counter + 1;
 
