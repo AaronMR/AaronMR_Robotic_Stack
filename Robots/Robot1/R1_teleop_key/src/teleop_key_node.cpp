@@ -103,7 +103,7 @@ void TeleopRobotinoKeyboard::keyboardLoop()
 
 	for(;;)
 	{
-		printf("A\n");
+		
 		// get the next event from the keyboard
 		if(read(kfd, &c, 1) < 0)
 		{
@@ -113,7 +113,7 @@ void TeleopRobotinoKeyboard::keyboardLoop()
 
 		if( (ros::Time::now() - cmd_time).toSec() > 2 )
 		{
-			cmd.linear.x = cmd.linear.y = cmd.angular.z = 0;
+			//cmd.linear.x = cmd.linear.y = cmd.angular.z = 0;
 		}
 
 		cmd_time = ros::Time::now();
